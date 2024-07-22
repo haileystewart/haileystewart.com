@@ -1,0 +1,36 @@
+.breadcrumb {
+    display: flex;
+    align-items: center;
+  }
+  
+  .breadcrumb-item {
+    color: var(--breadcrumb-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .breadcrumb-item:hover {
+    color: var(--breadcrumb-hover-color);
+  }
+  
+  .breadcrumb-item.active {
+    font-weight: bold;
+    color: var(--breadcrumb-active-color);
+  }
+  
+  .breadcrumb-separator {
+    margin: 0 0.5rem;
+  }
+  
+  .breadcrumb-light .breadcrumb-item {
+    --breadcrumb-color: #000;
+    --breadcrumb-hover-color: #333;
+    --breadcrumb-active-color: #000;
+  }
+  
+  .breadcrumb-dark .breadcrumb-item {
+    --breadcrumb-color: #fff;
+    --breadcrumb-hover-color: #ccc;
+    --breadcrumb-active-color: #fff;
+  }
+  

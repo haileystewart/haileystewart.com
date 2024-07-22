@@ -1,25 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Raleway:wght@400;700&display=swap');
+
 :root {
-    --bg-color: #1c1c1c;
-    --primary-color: #1c1c1c;
-    --secondary-color: #f2f2f2;
-    --text-color: #f2f2f2;
-    --text-color-2: #f2f2f2;
-    --text-color-3: #80111e;
-    --overlay-color: #1c1c1c;
+    --bg-color: #EEEEEE;
+    --primary-color: #EEEEEE;
+    --secondary-color: #333333;
+    --text-color: #333333;
+    --text-color-2: #333333;
+    --text-color-3: #B4A1BB;
+    --overlay-color: #EEEEEE;
 }
 
-[data-theme="light"] {
-    --bg-color: #f2f2f2;
-    --primary-color: #f2f2f2;
-    --secondary-color: #1c1c1c;
-    --text-color: #1c1c1c;
-    --text-color-2: #1c1c1c;
-    --text-color-3: #80111e;
-    --overlay-color: #f2f2f2b3;
+[data-theme="dark"] {
+    --bg-color: #333333;
+    --primary-color: #333333;
+    --secondary-color: #EEEEEE;
+    --text-color: #EEEEEE;
+    --text-color-2: #EEEEEE;
+    --text-color-3: #B4A1BB;
+    --overlay-color: #333333;
 }
 
-html,
-body {
+html, body {
     height: 100%;
 }
 
@@ -42,49 +43,26 @@ ul {
     list-style: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: Marcellus;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Marcellus', serif;
 }
 
-a,
-a:hover {
+a, a:hover {
     color: var(--text-color);
 }
 
 p {
-    word-break: break-word;
-    hyphens: auto;
+    word-break: normal;
+    margin-top: 0;
+    margin-bottom: 1.3rem;
 }
 
-.ovhidden {
-    overflow: hidden;
-}
-
-.text_2,
-.text_2:hover {
+.text_2, .text_2:hover {
     color: var(--text-color-2);
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-.cursor__dot div {
-    z-index: 999999 !important;
-}
-
-.cursor__dot div:last-child {
-    background-color: var(--text-color-3) !important;
-}
-
-.cursor__dot div:first-child {
-    filter: invert(1);
-    background-color: var(--overlay-color) !important;
 }
 
 .color_pr {

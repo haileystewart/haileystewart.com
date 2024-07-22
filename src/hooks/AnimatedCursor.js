@@ -90,7 +90,7 @@ function useEventListener(eventName, handler, element = document) {
 function CursorCore({
     outerStyle,
     innerStyle,
-    color = '220, 90, 90',
+    color = '180, 161, 187',
     outerAlpha = 0.3,
     innerSize = 8,
     outerSize = 8,

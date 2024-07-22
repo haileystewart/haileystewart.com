@@ -2,15 +2,87 @@ import React from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
-import { 
-  meta, homelab, 
-  homelab_obj, 
-  homelab_tools, 
-  homelab_config,
-  homelab_skills,
-} from "../../../content_option";
 
-export const Project1 = () => {
+const meta = {
+  title: "Network Traffic Monitoring and Analysis",
+  description: "Details about the Network Traffic Monitoring and Analysis project"
+};
+
+const homelab = {
+    title: "Overview",
+    title_description1: "",
+    title_description2: "",
+    objectives: "Objectives",
+    toolsTech: "Tools and Technologies",
+    config: "Setup and Configuration",
+    challenges: "Challenges",
+    challenges_description: "",
+    learning: "Learning",
+    learning_description: "",
+    outcomes: "Outcomes and Reflection",
+    outcomes_description: "",
+    skills: "Skills Demonstrated"
+};
+
+const homelab_obj = [
+    {
+        title: "Practical Skill Application:",
+        description: "",
+    },
+    {
+        title: "Skill Expansion:",
+        description: "",
+    },
+    {
+        title: "Continuous Learning:",
+        description: "",
+    },
+];
+
+const homelab_tools = [
+    {
+        name: "Kali Linux",
+        value: 85,
+    },
+    {
+        name: "Oracle VM VirtualBox",
+        value: 90,
+    },
+    {
+        name: "Wireshark",
+        value: 75,
+    },
+];
+
+const homelab_skills = [
+    {
+        index: "Network Configuration and Security:",
+        item: [
+            "",
+    ]},
+    {
+        index: "System Administration:",
+        item: [
+            "",
+    ]},
+    {
+        index: "Knowledge of Cybersecurity Principles:",
+        item: [
+            "",
+    ]},
+    {
+        index: "Technical Troubleshooting:",
+        item: [
+            "",
+    ]},
+    {
+        index: "Security Best Practices",
+        item: [
+            "",
+    ]},
+];
+
+export const Project2 = () => {
     return (
       <HelmetProvider>
         <Container className="About-header">
@@ -21,7 +93,7 @@ export const Project1 = () => {
           </Helmet>
           <Row className="mb-5 mt-3 pt-md-3">
             <Col lg="8">
-              <h1 className="display-4 mb-4">Home Lab Configuration</h1>{" "}
+              <h1 className="display-4 mb-4">Network Traffic Monitoring and Analysis</h1>{" "}
               <hr className="t_border my-4 ml-0 text-left" />
             </Col>
           </Row>
@@ -99,8 +171,7 @@ export const Project1 = () => {
           </Col>
           <Col lg="7" className="d-flex align-items-center">
             <div>
-              <p>{homelab.challenges_description1}</p>
-              <p>{homelab.challenges_description2}</p>
+              <p>{homelab.challenges_description}</p>
             </div>
           </Col>
         </Row>
@@ -110,8 +181,7 @@ export const Project1 = () => {
           </Col>
           <Col lg="7" className="d-flex align-items-center">
             <div>
-              <p>{homelab.learning_description1}</p>
-              <p>{homelab.learning_description2}</p>
+              <p>{homelab.learning_description}</p>
             </div>
           </Col>
         </Row>
@@ -121,8 +191,7 @@ export const Project1 = () => {
           </Col>
           <Col lg="7" className="d-flex align-items-center">
             <div>
-              <p>{homelab.outcomes_description1}</p>
-              <p>{homelab.outcomes_description2}</p>
+              <p>{homelab.outcomes_description}</p>
             </div>
           </Col>
         </Row>
