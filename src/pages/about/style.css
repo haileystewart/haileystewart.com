@@ -1,28 +1,41 @@
-.progress-title {
-    font-size: 16px;
+.sec_sp {
+    padding: 30px 0;
+  }
+  
+  .table td,
+  .table th {
+    color: var(--text-color);
+  }
+  
+  .t_border {
+    border-color: var(--text-color) !important;
+  }
+  
+  .progress-title {
+    font-size: 1rem; 
     font-weight: 700;
     margin: 15px 0 20px;
     font-family: 'Raleway';
-}
-
-.progress {
+  }
+  
+  .progress {
     height: 5px;
     background: var(--secondary);
     border-radius: 0;
     box-shadow: none;
     margin-bottom: 30px;
     overflow: visible;
-}
-
-.progress .progress-bar {
+  }
+  
+  .progress .progress-bar {
     position: relative;
     background: var(--text-color);
     animation: animate-positive 2s;
     overflow: visible;
     opacity: 0.9;
-}
-
-.progress .progress-value {
+  }
+  
+  .progress .progress-value {
     position: absolute;
     top: -30px;
     right: 8px;
@@ -30,16 +43,31 @@
     font-weight: bold;
     font-style: italic;
     color: var(--text-color);
-}
-
-@-webkit-keyframes animate-positive {
-  0% {
-      width: 0%;
   }
-}
-
-@keyframes animate-positive {
-  0% {
-      width: 0%;
+  
+  .education-item p {
+    font-size: 1rem; 
+    margin: 10px 0;
   }
-}
+  
+  .education-specialization {
+    margin-top: 5px;
+    padding-left: 15px;
+  }
+  
+  .About-header {
+    padding-bottom: 60px;
+  }
+  
+  @-webkit-keyframes animate-positive {
+    0% {
+      width: 0%;
+    }
+  }
+  
+  @keyframes animate-positive {
+    0% {
+      width: 0%;
+    }
+  }
+  

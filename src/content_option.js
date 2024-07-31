@@ -1,8 +1,8 @@
 import homepageimg from './assets/images/homepageimage.jpg';
 import image1 from "./assets/images/image1.png";
 import image2 from "./assets/images/image2.png";
-import image3 from "./assets/images/image3.png";
-import image4 from "./assets/images/image4.png";
+//import image3 from "./assets/images/image3.png";
+//import image4 from "./assets/images/image4.png";
 
 export const logotext = "Hailey Stewart";
 
@@ -24,94 +24,157 @@ export const introdata = {
 };
 
 //about page
-export const dataabout = {
-    title: "Introduction",
-    aboutme: "I am a dedicated computer science student with a deep passion for cybersecurity. My journey in this field is driven by a commitment to safeguard digital information and a fascination with the ever-evolving landscape of network security. I have honed my skills through my portfolio projects and internships, where I've tackled challenges in data protection and network security. I'm always eager to learn, grow, and collaborate on projects that make the digital world safer and more secure.",
-};
-
-export const worktimeline = [
-    {
+export const about = {
+    dataabout: {
+      title: "Introduction",
+      aboutme: "I am a dedicated computer science student with a deep passion for cybersecurity. My journey in this field is driven by a commitment to safeguard digital information and a fascination with the ever-evolving landscape of network security. I have honed my skills through my portfolio projects and internships, where I've tackled challenges in data protection and network security. I'm always eager to learn, grow, and collaborate on projects that make the digital world safer and more secure.",
+    },
+  
+    worktimeline: [
+      {
         jobtitle: "Security Operations Intern",
         where: "SelectQuote",
-        date: "2024",
-    },
-    {
+        date: "05/2024 – 08/2024",
+        description: [
+          "Implemented absolute cryptographic wipe and offboarding processes, ensuring secure data deletion and compliance with security policies.",
+          "Conducted Active Directory (AD) cleaning and hardening, identifying low-confidence users and terminating inactive accounts to enhance security.",
+          "Installed and configured SentinelOne endpoint protection for UAT and development database servers, improving threat detection and response capabilities.",
+          "Managed Governance, Risk, and Compliance (GRC) using Onspring, streamlining security operations and maintaining regulatory compliance."
+        ],
+      },
+      {
         jobtitle: "IT Infrastructure Intern",
         where: "Wi-Tronix",
-        date: "2023",
-    },
-    {
-        jobtitle: "Computer Science Student",
-        where: "Illinois Institute of Technology",
-        date: "2021 - 2025",
-    },
-];
-
-export const programmingLanguages = [
-    {
-        name: "Python",
-        value: 90,
-    },
-    {
-        name: "Bash/Shell Scripting",
-        value: 85,
-    },
-    {
-        name: "SQL",
-        value: 80,
-    },
-    {
-        name: "React",
-        value: 60,
-    },
-    {
-        name: "Powershell",
-        value: 85,
-    },
-];
-
-export const operatingSystems = [
-    {
-        name: "Linux",
-        value: 80,
-    },
-    {
-        name: "Ubuntu",
-        value: 85,
-    },
-    {
-        name: "Node.js",
-        value: 90,
-    },
-    {
-        name: "UNIX",
-        value: 65,
-    },
-];
-
-export const tools = [
-    {
-        name: "VMWare",
-        value: 80,
-    },
-    {
-        name: "AWS",
-        value: 90,
-    },
-    {
-        name: "Arduino",
-        value: 70,
-    },
-    {
-        name: "Wireshark",
-        value: 75,
-    },
-    {
-        name: "VirtualBox",
-        value: 95,
-    },
-];
-
+        date: "05/2023 – 12/2023",
+        description: [
+          "Developed and demoed a comprehensive incident response orchestration, enhancing cybersecurity response capabilities.",
+          "Conducted firewall and NAT rule cleanup, refining access controls and boosting network security.",
+          "Implemented AWS security recommendations, enhancing cloud security and regulatory compliance.",
+          "Executed switch configurations, optimizing network performance and ensuring adherence to best practices.",
+          "Performed systematic code upgrades on Juniper Switches, ensuring optimal performance and security."
+        ],
+      },
+    ],
+  
+    education: [
+      {
+        major: "Computer Science",
+        degree: "Bachelor of Science",
+        institution: "Illinois Institute of Technology",
+        date: "08/2021 – 05/2025",
+        specialization: "Specializations in Information Security and Distributed and Cloud Computing"
+      },
+    ],
+  
+    /*
+    certifications: [
+      {
+        name: "Comptia Security+",
+      },
+      {
+        name: "AWS Certified Cloud Practitioner",
+      },
+    ],
+    */
+  
+    technicalSkills: [
+      {
+        category: "Security Tools",
+        skills: [
+          //"SIEM (Splunk, QRadar)",
+          //"IDS/IPS (Snort, Suricata)",
+          //"Vulnerability Scanners (Nessus, OpenVAS)",
+          "Antivirus/Endpoint Protection"
+        ],
+      },
+      /*
+      {
+        category: "Penetration Testing",
+        skills: [
+          "Metasploit",
+          "Burp Suite",
+          "OWASP ZAP"
+        ],
+      },
+      */
+     /*
+      {
+        category: "Compliance and Frameworks",
+        skills: [
+          "NIST",
+          "ISO 27001",
+          "GDPR",
+          "HIPAA"
+        ],
+      },
+      */
+      {
+        category: "Threat Intelligence",
+        skills: [
+          //"Threat Hunting",
+          "Malware Analysis",
+          "Incident Response"
+        ],
+      },
+      {
+        category: "Network Security",
+        skills: [
+          "TCP/IP",
+          "VPN",
+          "Firewalls",
+          "Network Traffic Analysis"
+        ],
+      },
+      {
+        category: "Cloud Security",
+        skills: [
+          "AWS",
+          //"Azure"
+        ],
+      },
+      {
+        category: "Forensic Tools",
+        skills: [
+          "Wireshark",
+          //"EnCase",
+          //"FTK"
+        ],
+      },
+      {
+        category: "Programming Languages",
+        skills: [
+          "Python",
+          "Bash/Shell Scripting",
+          "SQL",
+          "PowerShell"
+        ],
+      },
+      {
+        category: "Operating Systems",
+        skills: [
+          "Linux",
+          "Windows",
+          "macOS"
+        ],
+      },
+      {
+        category: "Virtualization and Containerization",
+        skills: [
+          "VMware",
+          "VirtualBox",
+          //"Docker"
+        ],
+      },
+      {
+        category: "Version Control",
+        skills: [
+          "Git",
+          "GitHub"
+        ],
+      },
+    ],
+  };
+  
 
 //portfolio page
 export const dataportfolio = [
@@ -143,6 +206,7 @@ export const dataportfolio = [
     */
   ];
   
+
   //project1
   export const project1 = {
     title: "Home Lab Configuration",
@@ -219,7 +283,6 @@ export const project2 = {
     ]
   };
   
-
 
 //contact page
 export const contactConfig = {
