@@ -127,6 +127,7 @@ export const dataportfolio = [
       img: image2,
       link: "project2"
     },
+    /*
     {
       title: "Project 3",
       description: "Description for project 3.",
@@ -139,6 +140,7 @@ export const dataportfolio = [
       img: image4,
       link: "project4"
     }
+    */
   ];
   
   //project1
@@ -176,8 +178,8 @@ export const dataportfolio = [
 };
   
 
-  //project2
-  export const project2 = {
+//project2
+export const project2 = {
     title: "Network Traffic Monitoring and Analysis",
     overview: "Conducted comprehensive network traffic monitoring and analysis using Wireshark and tcpdump, identifying and mitigating security threats through detailed traffic pattern analysis and anomaly detection.",
     purpose: [
@@ -208,8 +210,15 @@ export const dataportfolio = [
       { name: "Compliance Monitoring", description: "Ensuring network activities align with policies and regulations." },
       { name: "Performance Optimization", description: "Identifying and resolving network performance issues." }
     ],
-    methodology: "The process and methodology for this project involve setting up the necessary tools, capturing network traffic, analyzing the data using various techniques, and generating comprehensive reports on the findings."
+    methodology: "The process and methodology for this project involve setting up the necessary tools, capturing network traffic, analyzing the data using various techniques, and generating comprehensive reports on the findings.",
+    images: [
+      { path: 'screenshot1.png', description: 'Detailed view of captured packets in Wireshark, highlighting suspicious DNS queries and TCP anomalies.' },
+      { path: 'screenshot2.png', description: 'Terminal output showing live traffic capture using tcpdump.' },
+      { path: 'screenshot3.png', description: 'Running the custom analysis script to process captured traffic and generate reports.' },
+      { path: 'screenshot4.png', description: 'Example of a daily email report sent with the analysis results.' }
+    ]
   };
+  
 
 
 //contact page
