@@ -23,17 +23,17 @@ export const About = () => {
           <Col lg="5">
             <h3 className="color_sec py-4">{about.dataabout.title}</h3>
           </Col>
-          <Col lg="7" className="d-flex align-items-center">
+          <Col lg="7" className="text-section d-flex align-items-center">
             <div>
               <p>{about.dataabout.aboutme}</p>
             </div>
           </Col>
         </Row>
-        <Row className=" sec_sp">
+        <Row className="sec_sp">
           <Col lg="5">
             <h3 className="color_sec py-4">Work Experience</h3>
           </Col>
-          <Col lg="7">
+          <Col lg="7" className="text-section">
             <table className="table caption-top">
               <tbody>
                 {about.worktimeline.map((data, i) => (
@@ -51,7 +51,7 @@ export const About = () => {
           <Col lg="5">
             <h3 className="color_sec py-4">Education</h3>
           </Col>
-          <Col lg="7">
+          <Col lg="7" className="text-section">
             <div className="education-section">
               {about.education.map((edu, i) => (
                 <div className="education-item" key={i}>
@@ -67,7 +67,7 @@ export const About = () => {
           <Col lg="5">
             <h3 className="color_sec py-4">Certifications</h3>
           </Col>
-          <Col lg="7">
+          <Col lg="7" className="text-section">
             <table className="table caption-top">
               <tbody>
                 {about.certifications.map((cert, i) => (
@@ -83,7 +83,7 @@ export const About = () => {
           <Col lg="5">
             <h3 className="color_sec py-4">Technical Skills</h3>
           </Col>
-          <Col lg="7">
+          <Col lg="7" className="text-section">
             <table className="table caption-top">
               <tbody>
                 {about.technicalSkills.map((skill, i) => (

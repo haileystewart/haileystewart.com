@@ -23,7 +23,7 @@ const Project1 = () => {
           <Col lg="5">
             <h3 className="color_sec py-4">Overview</h3>
           </Col>
-          <Col lg="7" className="d-flex align-items-center">
+          <Col lg="7" className="text-section d-flex align-items-center">
             <div>
               <p>{project1.overview}</p>
             </div>
@@ -33,7 +33,7 @@ const Project1 = () => {
           <Col lg="5">
             <h3 className="color_sec py-4">Purpose</h3>
           </Col>
-          <Col lg="7">
+          <Col lg="7" className="text-section">
             <table className="table caption-top">
               <tbody>
                 {project1.purpose.map((purpose, index) => (
@@ -49,7 +49,7 @@ const Project1 = () => {
           <Col lg="5">
             <h3 className="color_sec py-4">Key Goals</h3>
           </Col>
-          <Col lg="7">
+          <Col lg="7" className="text-section">
             <table className="table caption-top">
               <tbody>
                 {project1.keyGoals.map((goal, index) => (
@@ -65,13 +65,13 @@ const Project1 = () => {
           <Col lg="5">
             <h3 className="color_sec py-4">Scope</h3>
           </Col>
-          <Col lg="7">
+          <Col lg="7" className="text-section">
             <table className="table caption-top">
               <tbody>
                 {project1.scope.map((scope, index) => (
                   <tr key={index}>
-                    <th scope="row">{scope.name}</th>
-                    <td>{scope.description}</td>
+                    <td className="bold-column">{scope[0]}</td>
+                    <td>{scope[1]}</td>
                   </tr>
                 ))}
               </tbody>
@@ -82,13 +82,13 @@ const Project1 = () => {
           <Col lg="5">
             <h3 className="color_sec py-4">Tools and Technologies</h3>
           </Col>
-          <Col lg="7">
+          <Col lg="7" className="text-section">
             <table className="table caption-top">
               <tbody>
                 {project1.toolsTech.map((tool, index) => (
                   <tr key={index}>
-                    <th scope="row">{tool.name}</th>
-                    <td>{tool.description}</td>
+                    <td className="bold-column">{tool[0]}</td>
+                    <td>{tool[1]}</td>
                   </tr>
                 ))}
               </tbody>
@@ -99,13 +99,13 @@ const Project1 = () => {
           <Col lg="5">
             <h3 className="color_sec py-4">Skills Demonstrated</h3>
           </Col>
-          <Col lg="7">
+          <Col lg="7" className="text-section">
             <table className="table caption-top">
               <tbody>
                 {project1.skills.map((skill, index) => (
                   <tr key={index}>
-                    <th scope="row">{skill.name}</th>
-                    <td>{skill.description}</td>
+                    <td className="bold-column">{skill[0]}</td>
+                    <td>{skill[1]}</td>
                   </tr>
                 ))}
               </tbody>
@@ -116,7 +116,7 @@ const Project1 = () => {
           <Col lg="5">
             <h3 className="color_sec py-4">Process and Methodology</h3>
           </Col>
-          <Col lg="7" className="d-flex align-items-center">
+          <Col lg="7" className="text-section d-flex align-items-center">
             <div>
               <p>{project1.methodology}</p>
             </div>

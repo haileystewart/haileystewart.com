@@ -43,3 +43,24 @@
     width: 0%;
 }
 }
+
+.modal-body-custom {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expanded-image {
+  width: 100%;
+  height: auto;
+  max-width: 200%;
+  max-height: 200%;
+  object-fit: contain;
+  transform: scale(2.5); /* 400% zoom */
+}
+
+.clickable-image {
+  max-width: 100%;
+  cursor: pointer;
+}

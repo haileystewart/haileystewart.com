@@ -75,11 +75,14 @@ code {
   padding: 30px 0;
 }
 
+.text-section {
+  margin-top: 20px;
+}
+
 .table {
   background-color: var(--bg-color);
   border-collapse: collapse;
   width: 100%;
-  margin-top: 20px;
 }
 
 .table td, .table th {
@@ -103,8 +106,13 @@ code {
   background-color: var(--secondary-color);
 }
 
-.table td:first-child, .table th:first-child {
+.table td:first-child {
   padding-left: 0;
+  width: 200px; /* Fixed width for the first column */
+}
+
+.table td:first-child.bold-column {
+  font-weight: bold;
 }
 
 .table td:last-child, .table th:last-child {
