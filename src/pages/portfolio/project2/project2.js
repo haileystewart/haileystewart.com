@@ -6,11 +6,13 @@ import { project2 } from "../../../content_option";
 import tcpdump_command_execution from "../../../assets/images/tcpdump_command_execution.png";
 import wireshark_packet_analysis from "../../../assets/images/wireshark_packet_analysis.png";
 import python_script_execution from "../../../assets/images/python_script_execution.png";
+import scheduled_email from "../../../assets/images/scheduled_email.png";
 
 const images = {
   "tcpdump_command_execution": tcpdump_command_execution,
   "wireshark_packet_analysis": wireshark_packet_analysis,
-  "python_script_execution": python_script_execution
+  "python_script_execution": python_script_execution,
+  "scheduled_email" : scheduled_email,
 };
 
 const Project2 = () => {
