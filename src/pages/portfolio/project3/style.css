@@ -50,3 +50,42 @@
     grid-template-columns: 1fr;
   }
 }
+
+.section-phase {
+  margin-bottom: 20px; /* Add spacing between phases/sections */
+}
+
+.section-title {
+  font-size: 1.25rem; /* Smaller than main section titles */
+  font-weight: bold; /* Highlight the phase title */
+  margin-bottom: 10px; /* Spacing below the title */
+  color: var(--text-color); /* Match the theme colors */
+}
+
+.section-paragraph {
+  margin-bottom: 15px; /* Add spacing between paragraphs for readability */
+  line-height: 1.6; /* Improve paragraph line spacing */
+}
+
+/* Link Styling */
+.section-link {
+  text-decoration: none; /* Default state without underline */
+  color: var(--text-color); /* Use default text color */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.section-link:hover {
+  text-decoration: underline; /* Add underline on hover */
+  color: var(--text-color-3); /* Change color to --text-color-3 on hover */
+}
+
+.result-image {
+  display: block;
+  margin: 20px auto; /* Center and add spacing */
+  max-width: 100%; /* Ensure it fits within the container */
+  height: auto; /* Maintain aspect ratio */
+  border: 1px solid #ccc;
+  padding: 5px;
+  background: #f9f9f9;
+}
+
