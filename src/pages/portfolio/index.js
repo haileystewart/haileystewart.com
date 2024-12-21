@@ -6,6 +6,8 @@ import { dataportfolio, meta } from "../../content_option";
 import { Link } from "react-router-dom";
 
 export const Portfolio = () => {
+  const sortedPortfolio = dataportfolio.sort((a, b) => new Date(b.date) - new Date(a.date));
+
   return (
     <HelmetProvider>
       <Container className="About-header">
@@ -21,12 +23,22 @@ export const Portfolio = () => {
           </Col>
         </Row>
         <div className="portfolio-grid">
-          {dataportfolio.map((data, i) => (
+          {sortedPortfolio.map((data, i) => (
             <div key={i} className="portfolio-item">
-              <Link to={`/portfolio/${data.link}`}>
-                <h2 className="portfolio-title">{data.title}</h2>
-                <img src={data.img} alt={`Project ${i + 1}`} className="portfolio-image" />
-              </Link>
+              <hr className="t_border my-4 ml-0 text-left" />
+              <div className="portfolio-content">
+                <div className="portfolio-header">
+                  <h2 className="portfolio-title">
+                    <Link to={`/portfolio/${data.link}`}>{data.title}</Link>
+                  </h2>
+                  <p className="portfolio-description">{data.description}</p>
+                </div>
+                  {data.date ? (
+                    <span className="portfolio-date">{data.date}</span>
+                  ) : (
+                    <span className="portfolio-date">No Date Provided</span>
+                  )}
+              </div>
             </div>
           ))}
         </div>

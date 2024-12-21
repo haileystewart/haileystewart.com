@@ -189,29 +189,31 @@ export const about = {
 
 //portfolio page
 export const dataportfolio = [
+    /*
     {
       title: "Home Lab Configuration",
       description: "A detailed configuration of a home lab environment using various technologies.",
-      img: image1,
+      date: "2023-03-01",
       link: "project1"
     },
     {
       title: "Network Traffic Monitoring and Analysis",
       description: "Monitoring and analyzing network traffic to detect and prevent security threats.",
-      img: image2,
+      date: "2024-06-01",
       link: "project2"
     },
+    */
     {
-      title: "Project 3",
-      description: "Description for project 3.",
-      img: image3,
-      link: "project3"
+      title: "Improving Botnet Detection and Mitigation Techniques Using Machine Learning",
+      description: "A graduate-level research paper on advanced botnet detection methods using rule-based and machine learning techniques.",
+      date: "2024-11-01",
+      link: "botnet_detection"
     },
     /*
     {
       title: "Project 4",
       description: "Description for project 4.",
-      img: image4,
+      date: "",
       link: "project4"
     }
     */
@@ -335,8 +337,8 @@ export const project2 = [
   }
 ];
   
-//project3
-export const project3 = {
+//botnet_detection
+export const botnet_detection = {
   title: "Improving Botnet Detection and Mitigation Techniques Using Machine Learning",
   abstract: [
     "This project explored detecting botnet activity in network traffic using rule-based and machine learning approaches to address the growing cybersecurity threat posed by botnets, commonly used for DDoS attacks, data theft, and other malicious activities. Effective detection is critical for mitigating these threats and protecting network infrastructure.",

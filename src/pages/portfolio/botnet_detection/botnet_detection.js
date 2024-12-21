@@ -2,9 +2,9 @@ import React from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
-import { project3, meta } from "../../../content_option";
+import { botnet_detection, meta } from "../../../content_option";
 
-const Project3 = () => {
+const BotnetDetection = () => {
     return (
       <HelmetProvider>
         <Container className="About-header">
@@ -15,7 +15,7 @@ const Project3 = () => {
           </Helmet>
           <Row className="mb-5 mt-3 pt-md-3">
             <Col lg="8">
-              <h1 className="display-4 mb-4">{project3.title}</h1>
+              <h1 className="display-4 mb-4">{botnet_detection.title}</h1>
               <p className="intro-text">
                 This was a paper for my graduate class: Advanced Computer Security that I worked on as a group leader. It was written in collaboration with Alec Donald and Amir Stephens.
               </p>
@@ -28,7 +28,7 @@ const Project3 = () => {
         </Col>
         <Col lg="7" className="text-section d-flex align-items-center">
             <div>
-            {project3.abstract.map((paragraph, index) => (
+            {botnet_detection.abstract.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
             ))}
             </div>
@@ -41,7 +41,7 @@ const Project3 = () => {
                 <Col lg="7" className="text-section">
                     <table className="table caption-top">
                     <tbody>
-                        {project3.keywords.map((keywords, index) => (
+                        {botnet_detection.keywords.map((keywords, index) => (
                         <tr key={index}>
                             <td className="bold-column">{keywords[0]}</td>
                             <td>{keywords[1]}</td>
@@ -57,7 +57,7 @@ const Project3 = () => {
         </Col>
         <Col lg="7" className="text-section d-flex align-items-center">
             <div>
-            {project3.introduction.map((paragraph, index) => (
+            {botnet_detection.introduction.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
             ))}
             </div>
@@ -69,8 +69,8 @@ const Project3 = () => {
         </Col>
         <Col lg="7" className="text-section">
             <div>
-            <p>{project3.methodology.intro}</p>
-            {project3.methodology.phases.map((phase, index) => (
+            <p>{botnet_detection.methodology.intro}</p>
+            {botnet_detection.methodology.phases.map((phase, index) => (
                 <div key={index} className="section-phase">
                 <h4 className="section-title">{phase.title}</h4>
                 {phase.paragraphs.map((paragraph, pIndex) => (
@@ -87,7 +87,7 @@ const Project3 = () => {
   </Col>
   <Col lg="7" className="text-section">
     <div>
-      {project3.results.phases.map((phase, index) => (
+      {botnet_detection.results.phases.map((phase, index) => (
         <div key={index} className="section-phase">
           <h4 className="section-title">{phase.title}</h4>
           {phase.paragraphs.map((paragraph, pIndex) => (
@@ -125,21 +125,21 @@ const Project3 = () => {
 
         <Row className="sec_sp">
         <Col lg="5">
-            <h3 className="color_sec py-4">{project3.comparison.title}</h3>
+            <h3 className="color_sec py-4">{botnet_detection.comparison.title}</h3>
         </Col>
         <Col lg="7" className="text-section">
             <div>
-            <p>{project3.comparison.intro}</p>
+            <p>{botnet_detection.comparison.intro}</p>
             <table className="table caption-top">
                 <thead>
                 <tr>
-                    {project3.comparison.table[0].map((header, index) => (
+                    {botnet_detection.comparison.table[0].map((header, index) => (
                     <th key={index}>{header}</th>
                     ))}
                 </tr>
                 </thead>
                 <tbody>
-                {project3.comparison.table.slice(1).map((row, rowIndex) => (
+                {botnet_detection.comparison.table.slice(1).map((row, rowIndex) => (
                     <tr key={rowIndex}>
                     {row.map((cell, cellIndex) => (
                         <td key={cellIndex}>{cell}</td>
@@ -148,7 +148,7 @@ const Project3 = () => {
                 ))}
                 </tbody>
             </table>
-            {project3.comparison.paragraphs.map((paragraph, index) => (
+            {botnet_detection.comparison.paragraphs.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
             ))}
             </div>
@@ -156,11 +156,11 @@ const Project3 = () => {
         </Row>
         <Row className="sec_sp">
         <Col lg="5">
-            <h3 className="color_sec py-4">{project3.discussion.title}</h3>
+            <h3 className="color_sec py-4">{botnet_detection.discussion.title}</h3>
         </Col>
         <Col lg="7" className="text-section">
             <div>
-            {project3.discussion.sections.map((section, index) => (
+            {botnet_detection.discussion.sections.map((section, index) => (
                 <div key={index} className="section-phase">
                 <h4 className="section-title">{section.heading}</h4>
                 {section.paragraphs.map((paragraph, pIndex) => (
@@ -173,11 +173,11 @@ const Project3 = () => {
         </Row>
         <Row className="sec_sp">
         <Col lg="5">
-            <h3 className="color_sec py-4">{project3.conclusion.title}</h3>
+            <h3 className="color_sec py-4">{botnet_detection.conclusion.title}</h3>
         </Col>
         <Col lg="7" className="text-section">
             <div>
-            {project3.conclusion.paragraphs.map((paragraph, index) => (
+            {botnet_detection.conclusion.paragraphs.map((paragraph, index) => (
                 <p key={index} className="section-paragraph">{paragraph}</p>
             ))}
             </div>
@@ -189,7 +189,7 @@ const Project3 = () => {
         </Col>
         <Col lg="7" className="text-section">
             <div>
-            {project3.appendices.sections.map((section, index) => (
+            {botnet_detection.appendices.sections.map((section, index) => (
                 <div key={index} className="section-phase">
                 <h4 className="section-title">{section.title}</h4>
                 <p className="section-paragraph">{section.description}</p>
@@ -212,4 +212,4 @@ const Project3 = () => {
   );
 };
 
-export { Project3 };
+export { BotnetDetection };

@@ -6,7 +6,7 @@ import { About } from '../pages/about';
 import { Portfolio } from '../pages/portfolio';
 import { Project1 } from '../pages/portfolio/project1/project1';
 import { Project2 } from '../pages/portfolio/project2/project2';
-import { Project3 } from '../pages/portfolio/project3/project3';
+import { BotnetDetection } from '../pages/portfolio/botnet_detection/botnet_detection';
 import { Project4 } from '../pages/portfolio/project4/project4';
 import { ContactUs } from '../pages/contact';
 import { Socialicons } from '../components/socialicons';
@@ -32,7 +32,7 @@ const AnimatedRoutes = withRouterCustom(() => {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/portfolio/project1" element={<Project1 />} />
           <Route path="/portfolio/project2" element={<Project2 />} />
-          <Route path="/portfolio/project3" element={<Project3 />} />
+          <Route path="/portfolio/botnet_detection" element={<BotnetDetection />} />
           <Route path="/portfolio/project4" element={<Project4 />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="*" element={<Home />} />
