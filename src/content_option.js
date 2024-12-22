@@ -1,11 +1,11 @@
-import homepageimg from './public/assets/images/homepageimage.jpg';
+import homepageimg from './assets/images/homepageimage.jpg';
 
 import demoVideo from "./assets/videos/aws_hangman_video.mp4";
 
-import detectionVsFalsePositiveRate from "./public/assets/images/detection_vs_false_positive_rate.png";
-import packetVolumeOverTime from "./public/assets/images/packet_volume_over_time.png";
-import flaggedIpCount from "./public/assets/images/flagged_ip_count.png";
-import rocCurve from "./public/assets/images/ROC_Curve.png";
+import detectionVsFalsePositiveRate from "./assets/images/detection_vs_false_positive_rate.png";
+import packetVolumeOverTime from "./assets/images/packet_volume_over_time.png";
+import flaggedIpCount from "./assets/images/flagged_ip_count.png";
+import rocCurve from "./assets/images/ROC_Curve.png";
 
 export const logotext = "Hailey Stewart";
 
