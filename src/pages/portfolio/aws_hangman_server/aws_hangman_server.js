@@ -79,6 +79,16 @@ const AWSHangmanServer = () => {
             </table>
           </Col>
         </Row>
+        <video
+  src={aws_hangman_server.demoVideo}
+  autoPlay
+  loop
+  muted
+  controls
+  className="video-section"
+  style={{ width: "100%", borderRadius: "8px" }}
+/>
+
         <Row className="sec_sp">
           <Col lg="5">
             <h3 className="color_sec py-4">Project Flow</h3>

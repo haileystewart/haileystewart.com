@@ -1,18 +1,11 @@
-import homepageimg from './assets/images/homepageimage.jpg';
-import image1 from "./assets/images/image1.png";
-import image2 from "./assets/images/image2.png";
-import image3 from "./assets/images/image3.png";
-import image4 from "./assets/images/image4.png";
+import homepageimg from './public/assets/images/homepageimage.jpg';
 
-import tcpdump_command_execution from "./assets/images/tcpdump_command_execution.png";
-import wireshark_packet_analysis from "./assets/images/wireshark_packet_analysis.png";
-import python_script_execution from "./assets/images/python_script_execution.png";
-import scheduled_email from "./assets/images/scheduled_email.png";
+import demoVideo from "./assets/videos/aws_hangman_video.mp4";
 
-import detectionVsFalsePositiveRate from "./assets/images/detection_vs_false_positive_rate.png";
-import packetVolumeOverTime from "./assets/images/packet_volume_over_time.png";
-import flaggedIpCount from "./assets/images/flagged_ip_count.png";
-import rocCurve from "./assets/images/ROC_Curve.png";
+import detectionVsFalsePositiveRate from "./public/assets/images/detection_vs_false_positive_rate.png";
+import packetVolumeOverTime from "./public/assets/images/packet_volume_over_time.png";
+import flaggedIpCount from "./public/assets/images/flagged_ip_count.png";
+import rocCurve from "./public/assets/images/ROC_Curve.png";
 
 export const logotext = "Hailey Stewart";
 
@@ -559,19 +552,8 @@ export const aws_hangman_server = {
     "Multithreading on the server enables simultaneous gameplay for multiple users. Each connection spawns a new thread that operates independently, ensuring the server can manage individual game logic without conflict. This approach not only maximizes the server’s efficiency but also ensures a responsive and engaging user experience.",
     "The choice of TCP over UDP was intentional, as TCP’s reliability is crucial for text-based communication where missing or out-of-order messages could disrupt gameplay. If UDP were used, additional logic would be required to handle packet loss and reordering, adding complexity without significant benefit in this scenario.",
     "Deploying the system on AWS demonstrates the scalability of the project. Cloud-based deployment simulates real-world usage where clients connect over the internet, reflecting how distributed systems operate in practical environments. The ability to manage the server remotely and handle dynamic client interactions illustrates the robustness and adaptability of the implementation."
-  ]
-};
-
-//contact page
-export const contactConfig = {
-    YOUR_EMAIL: "haileyjordanstewart@gmail.com",
-    //YOUR_FONE: "(913)-777-6785",
-    description: "I'm always excited to hear about new opportunities or collaborate on creative projects. Whether you have a question, a proposal, or simply want to say hello, don't hesitate to reach out. My inbox is always open and I strive to reply promptly.",
-    // creat an emailjs.com account 
-    // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-    YOUR_SERVICE_ID: "service_id",
-    YOUR_TEMPLATE_ID: "template_id",
-    YOUR_USER_ID: "user_id",
+  ],
+  demoVideo,
 };
 
 //social links
