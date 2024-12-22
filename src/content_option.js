@@ -203,7 +203,7 @@ export const dataportfolio = [
     },
     {
       title: "AWS Hangman Server",
-      description: "A multithreaded client-server Hangman game built in C and deployed on AWS.",
+      description: "A multithreaded client-server Hangman game implemented in C, showcasing network programming, multithreading, and cloud deployment on AWS.",
       date: "2024-10-14",
       link: "aws_hangman_server"
     }
