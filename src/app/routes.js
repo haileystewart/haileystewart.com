@@ -7,8 +7,8 @@ import { Portfolio } from '../pages/portfolio';
 import { Project1 } from '../pages/portfolio/project1/project1';
 import { Project2 } from '../pages/portfolio/project2/project2';
 import { BotnetDetection } from '../pages/portfolio/botnet_detection/botnet_detection';
-import { Project4 } from '../pages/portfolio/project4/project4';
-import { ContactUs } from '../pages/contact';
+import { AWSHangmanServer } from '../pages/portfolio/aws_hangman_server/aws_hangman_server';
+import ContactUs from '../pages/contact';
 import { Socialicons } from '../components/socialicons';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
@@ -33,7 +33,7 @@ const AnimatedRoutes = withRouterCustom(() => {
           <Route path="/portfolio/project1" element={<Project1 />} />
           <Route path="/portfolio/project2" element={<Project2 />} />
           <Route path="/portfolio/botnet_detection" element={<BotnetDetection />} />
-          <Route path="/portfolio/project4" element={<Project4 />} />
+          <Route path="/portfolio/aws_hangman_server" element={<AWSHangmanServer />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="*" element={<Home />} />
         </Routes>

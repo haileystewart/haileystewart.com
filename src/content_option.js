@@ -186,7 +186,6 @@ export const about = {
     ],
   };
   
-
 //portfolio page
 export const dataportfolio = [
     /*
@@ -209,19 +208,16 @@ export const dataportfolio = [
       date: "2024-11-01",
       link: "botnet_detection"
     },
-    /*
     {
-      title: "Project 4",
-      description: "Description for project 4.",
-      date: "",
-      link: "project4"
+      title: "AWS Hangman Server",
+      description: "A multithreaded client-server Hangman game built in C and deployed on AWS.",
+      date: "2024-10-14",
+      link: "aws_hangman_server"
     }
-    */
-  ];
-  
+];
 
-  //project1
-  export const project1 = {
+//project1
+export const project1 = {
     title: "Home Lab Configuration",
     overview: "The Home Lab Configuration project was designed to set up a virtual environment for advancing cybersecurity skills. This involved creating and managing virtual machines (VMs) to simulate a realistic IT infrastructure, enabling the completion of various security projects.",
     purpose: [
@@ -252,8 +248,7 @@ export const dataportfolio = [
       ["Security Best Practices", "Explored and implemented industry-standard security practices and protocols."]
     ],
     methodology: "The methodology involved setting up necessary tools, capturing network traffic, analyzing data, and generating comprehensive reports on findings."
-  };
-  
+};
 
 //project2
 export const project2 = [
@@ -529,6 +524,44 @@ export const botnet_detection = {
   }
 };
 
+//aws_hangman_server
+export const aws_hangman_server = {
+  title: "AWS Hangman Server",
+  overview: "The AWS Hangman Server project is a modernized, networked adaptation of the classic Hangman game, designed to demonstrate key concepts in distributed computing and software engineering. Developed in C and deployed on AWS, this project implements a robust client-server architecture that enables seamless multiplayer gameplay. The server program serves as the central hub, coordinating game sessions for multiple clients simultaneously through the use of multithreading. Players connect to the server over a TCP network, ensuring reliable, ordered communication for an uninterrupted gaming experience. By leveraging cloud-based deployment on AWS, the project simulates real-world usage scenarios, highlighting the practical applications of scalable, distributed systems. The game logic, fault tolerance, and network reliability make this implementation a comprehensive exercise in advanced programming and deployment strategies.",
+  keyFeatures: [
+    "Client-Server Architecture with multithreading for concurrent client support.",
+    "Reliable real-time communication via TCP.",
+    "Randomized word selection from a dataset of over 69,000 words.",
+    "Robust error handling and cross-platform compatibility."
+  ],
+  technicalDetails: [
+    ["Languages Used", "C"],
+    ["Frameworks & Tools", "TCP Sockets, POSIX Threads, AWS EC2 instances"],
+    ["Deployment Environment", "Deployed on two AWS EC2 instances for server and client testing"],
+    ["Concurrency", "Server threads allow simultaneous connections and isolated game logic for each client"],
+    ["Networking Protocol", "TCP was chosen for its reliability and ordered data delivery"]
+  ],
+  skills: [
+    ["Network Programming", "Implemented TCP-based client-server communication and message protocols for game state exchange."],
+    ["Multithreading", "Used POSIX threads to handle multiple client connections independently."],
+    ["Cloud Deployment", "Configured and tested the server and client on AWS EC2 instances."],
+    ["System Debugging", "Handled edge cases and validated error-free communication and state management."]
+  ],
+  projectFlow: [
+    "The AWS Hangman server operates as a networked application built on the client-server model. The server program initializes by loading a comprehensive word list containing over 69,000 entries, preparing it for an unlimited number of game sessions. This word list serves as the foundation for the game, with each client receiving a unique word randomly selected during their session.",
+    "Once the server starts, it establishes a TCP socket to listen for incoming client connections. Each new connection is handled by a dedicated thread, ensuring that multiple clients can play independently and simultaneously without interference. The design leverages multithreading to separate game logic across different threads, maintaining smooth and isolated interactions.",
+    "On the client side, the user connects to the server using its IP address and designated port. The server greets the client with the game's initial state, displaying placeholders for the mystery word and the number of remaining lives. Clients are prompted to submit their guesses one letter at a time. Each guess is transmitted to the server, where it is validated and processed. Correct guesses reveal letters in the word, while incorrect ones reduce the player's remaining lives.",
+    "As the game progresses, the server communicates updates, including the partially revealed word, the player’s guessed letters, and the number of lives left. The game concludes when the player either guesses the word correctly or exhausts their lives. Upon completion, the server offers the option to play another round, resetting the state for a new game. The seamless interaction highlights the reliability of TCP and the robustness of the system.",
+    "The deployment aspect of the project further underscores its practicality. Both the server and client programs were tested on AWS EC2 instances. By running the programs on separate virtual machines, the system simulates real-world networked environments, confirming the application’s functionality across distributed systems. This deployment also showcases the portability and cross-platform compatibility of the code."
+  ],
+  implementation: [
+    "This project is a direct application of the client-server model, an essential architecture in distributed computing. The server acts as the central hub, managing resources and coordinating communication with multiple clients. By leveraging TCP, the system ensures reliable, ordered, and error-checked data exchange, which is critical for maintaining consistent game states.",
+    "Multithreading on the server enables simultaneous gameplay for multiple users. Each connection spawns a new thread that operates independently, ensuring the server can manage individual game logic without conflict. This approach not only maximizes the server’s efficiency but also ensures a responsive and engaging user experience.",
+    "The choice of TCP over UDP was intentional, as TCP’s reliability is crucial for text-based communication where missing or out-of-order messages could disrupt gameplay. If UDP were used, additional logic would be required to handle packet loss and reordering, adding complexity without significant benefit in this scenario.",
+    "Deploying the system on AWS demonstrates the scalability of the project. Cloud-based deployment simulates real-world usage where clients connect over the internet, reflecting how distributed systems operate in practical environments. The ability to manage the server remotely and handle dynamic client interactions illustrates the robustness and adaptability of the implementation."
+  ]
+};
+
 //contact page
 export const contactConfig = {
     YOUR_EMAIL: "haileyjordanstewart@gmail.com",
@@ -540,7 +573,6 @@ export const contactConfig = {
     YOUR_TEMPLATE_ID: "template_id",
     YOUR_USER_ID: "user_id",
 };
-
 
 //social links
 export const socialprofils = {
