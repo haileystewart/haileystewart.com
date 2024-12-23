@@ -1,13 +1,21 @@
 :root {
-    --bg-color: #FFFFFF;
-    --text-color: #000000; 
-    --secondary-color: #CCCCCC; 
+    --bg-color: #EEEEEE;
+    --primary-color: #EEEEEE;
+    --secondary-color: #333333;
+    --text-color: #333333;
+    --text-color-2: #333333;
+    --text-color-3: #B4A1BB;
+    --overlay-color: #EEEEEE;
 }
 
 [data-theme="dark"] {
-    --bg-color: #333333; 
-    --text-color: #FFFFFF; 
-    --secondary-color: #666666; 
+    --bg-color: #333333;
+    --primary-color: #333333;
+    --secondary-color: #EEEEEE;
+    --text-color: #EEEEEE;
+    --text-color-2: #EEEEEE;
+    --text-color-3: #B4A1BB;
+    --overlay-color: #333333;
 }
 
 .contact-form {
@@ -36,7 +44,7 @@
     width: 100%;
     padding: 10px;
     border: 1px solid var(--secondary-color); 
-    border-radius: 3px;
+    border-radius: 0; 
     box-sizing: border-box;
     background-color: var(--bg-color) !important; 
     color: var(--text-color) !important; 
@@ -58,11 +66,11 @@
     padding: 4px 19px;
     color: var(--secondary-color);
     position: relative;
-    border: var(--secondary-color) 2px solid;
+    border: var(--secondary-color) 1px solid;
     overflow: hidden;
     transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
     cursor: pointer;
-    border-radius: 0;
+    border-radius: 0; 
     margin-right: 20px;
     background: transparent;
     margin-top: 10px;

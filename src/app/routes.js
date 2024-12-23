@@ -12,6 +12,8 @@ import ContactUs from '../pages/contact';
 import { Socialicons } from '../components/socialicons';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
+import { Photography} from '../pages/photography/photography';
+
 const AnimatedRoutes = withRouterCustom(() => {
   const location = useLocation();
 
