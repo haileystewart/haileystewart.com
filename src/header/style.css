@@ -273,3 +273,13 @@ body {
     margin-right: 10px;
     text-decoration: none;
 }
+
+.site__navigation .the_menu {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.site__navigation .the_menu .menu_item {
+    list-style: none;
+}

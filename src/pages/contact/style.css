@@ -1,50 +1,126 @@
-.contact__form .form-control {
-    padding: 1.375rem .75rem;
-    line-height: 1.5;
-    color: var(--text-color);
+:root {
+    --bg-color: #FFFFFF;
+    --text-color: #000000; 
+    --secondary-color: #CCCCCC; 
+}
+
+[data-theme="dark"] {
+    --bg-color: #333333; 
+    --text-color: #FFFFFF; 
+    --secondary-color: #666666; 
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid var(--secondary-color); 
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--text-color-2);
     background-color: var(--bg-color);
-    border-radius: 0 !important;
-    border: 1px solid var(--secondary-color);
 }
 
-.contact__form input.form-control {
-    margin-bottom: 2em;
-    height: calc(2.5em + .75rem + 2px);
+.form-group {
+    margin-bottom: 15px;
 }
 
-/* Add spacing between the textarea and button */
-.contact__form textarea {
-    margin-bottom: 2em; /* Adjust this value for more or less spacing */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color); 
 }
 
-button.btn.ac_btn:hover {
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--secondary-color); 
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: var(--bg-color) !important; 
+    color: var(--text-color) !important; 
+    caret-color: var(--text-color) !important; 
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-color) !important; 
+    opacity: 0.6;
+}
+
+.form-group textarea {
+    height: 100px;
+}
+
+.contact__form button[type="submit"] {
+    padding: 4px 19px;
     color: var(--secondary-color);
+    position: relative;
+    border: var(--secondary-color) 2px solid;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    cursor: pointer;
+    border-radius: 0;
+    margin-right: 20px;
+    background: transparent;
+    margin-top: 10px;
 }
 
-.loading-bar {
-    position: fixed;
+.contact__form button[type="submit"]:hover {
+    box-shadow: 8px 8px 0px var(--text-color), -8px -8px 0px var(--text-color);
+}
+
+.contact__form button[type="submit"]:hover .one {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.contact__form button[type="submit"]:hover .two {
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.contact__form button[type="submit"]:hover .three {
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.contact__form button[type="submit"] .ring {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: transparent;
     top: 0;
     left: 0;
-    right: 0;
-    height: 10px;
-    z-index: 999999999;
-    background: var(--text-color);
-    transform: translateX(100%);
-    animation: shift-rightwards 1s ease-in-out infinite;
-    animation-delay: .3s;
+    transform: translate3d(0px, 90px, 0px);
 }
 
-@keyframes shift-rightwards {
-    0% {
-        transform: translateX(-100%);
-    }
-    40% {
-        transform: translateX(0%);
-    }
-    60% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
+.contact__form button[type="submit"] .one {
+    background-color: #000;
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -3;
+}
+
+.contact__form button[type="submit"] .two {
+    background-color: var(--primary-color);
+    transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -3;
+}
+
+.contact__form button[type="submit"] .three {
+    background-color: var(--secondary-color);
+    transition: all 0.7s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -3;
+}
+
+.status {
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--text-color); 
+}
+
+.error {
+    color: #d80303;
+    font-size: 0.875em;
+    margin-top: 5px;
 }

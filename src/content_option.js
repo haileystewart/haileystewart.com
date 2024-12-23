@@ -188,13 +188,13 @@ export const dataportfolio = [
       date: "2023-03-01",
       link: "project1"
     },
-    {
-      title: "Network Traffic Monitoring and Analysis",
-      description: "Monitoring and analyzing network traffic to detect and prevent security threats.",
-      date: "2024-06-01",
-      link: "project2"
-    },
     */
+    {
+      title: "RESTful Battleships Game Application",
+      description: "A Flutter-based application integrating with a RESTful API to enable user registration, login, and playing Battleships against human or AI opponents, with features for game management, responsive UI, and real-time game state updates.",
+      date: "2023-11-25",
+      link: "battleship"
+    },
     {
       title: "Improving Botnet Detection and Mitigation Techniques Using Machine Learning",
       description: "A graduate-level research paper on advanced botnet detection methods using rule-based and machine learning techniques.",
@@ -243,85 +243,132 @@ export const project1 = {
     methodology: "The methodology involved setting up necessary tools, capturing network traffic, analyzing data, and generating comprehensive reports on findings."
 };
 
-//project2
-export const project2 = [
+// battleship
+export const battleship = [
   {
-    section: "Overview",
-    content: "Network traffic was monitored and analyzed to identify potential security threats, performance bottlenecks, and compliance issues. The project involved capturing live traffic, analyzing it using Wireshark and custom scripts, and generating daily reports."
-  },
-  {
-    section: "Objectives",
-    content: [
-      ["Security", "Detect potential threats by monitoring DNS queries, TCP anomalies, and unusual traffic patterns."],
-      ["Performance", "Analyze traffic for performance bottlenecks, such as high latency and retransmissions."],
-      ["Compliance", "Ensure network activities adhere to organizational and regulatory policies."]
-    ]
-  },
-  {
-    section: "Tools and Technologies",
-    content: [
-      ["Wireshark", "For detailed packet analysis."],
-      ["tcpdump", "For capturing live network traffic."],
-      ["Python & Scapy", "For custom analysis and reporting."]
-    ]
-  },
-  {
-    section: "Skills Demonstrated",
-    content: [
-      ["Network Traffic Capture", "Captured live traffic using tcpdump for in-depth analysis."],
-      ["Packet Analysis", "Analyzed packets with Wireshark to identify anomalies and threats."],
-      ["Automation", "Automated the analysis and reporting process with Python scripts."],
-      ["Compliance Monitoring", "Ensured network activities complied with policies."]
-    ]
-  },
-  {
-    section: "Process and Methodology",
-    content: [
-      {
-        title: "Introduction",
-        steps: [
-          "The process and methodology for the network traffic analysis project involved several key steps, each contributing to the successful capture, analysis, and reporting of network traffic. This approach ensured a thorough understanding and proactive management of network traffic, providing valuable insights into the network's security and performance."
+    title: "RESTful Battleships Game Application",
+    overview: [
+      "This project brings the classic game of Battleships to life as a Flutter-based application that allows players to strategically place their ships and compete against either human or AI opponents. By interfacing with a RESTful API, the app provides a robust and interactive gaming experience, complete with secure user authentication, dynamic gameplay, and responsive design.",
+      "Developed with a focus on modern software engineering practices, this project highlights skills such as state management, asynchronous programming, and API-driven development. The application is a testament to the seamless integration of backend communication and frontend interactivity, making it a prime example of mastering full-stack Flutter app development."
+    ],
+    battleshipDemoVideo: "",
+    keyFeatures: {
+      userAuthentication: {
+        title: "User Authentication",
+        details: [
+          "Register and log in with secure credentials.",
+          "Persistent session tokens to maintain login state."
         ]
       },
-      {
-        title: "Traffic Capture",
-        command: "sudo tcpdump -i wlan0 -w ~/pcap_files/live_traffic.pcap",
-        steps: [
-          "To begin capturing network traffic, I opened the terminal and ran the command sudo tcpdump -i wlan0 -w ~/pcap_files/live_traffic.pcap. This command initiated the capture of live traffic on the wireless network interface. During the capture, I actively browsed the web and used various network applications to generate traffic. Once enough packets were captured, I stopped the process by pressing Ctrl+C. This step ensured that I had a sample of real-time network traffic for analysis."
-        ],
-        screenshot: "tcpdump_command_execution"
+      gameManagement: {
+        title: "Game Management",
+        details: [
+          "View a list of ongoing and completed games.",
+          "Initiate new games with human or AI opponents.",
+          "Delete active games to forfeit and remove them."
+        ]
       },
-      {
-        title: "Traffic Analysis",
-        filter: "dns or tcp.analysis.flags",
-        steps: [
-          "The captured traffic was then analyzed using Wireshark. I opened Wireshark and loaded the live_traffic.pcap file. To identify potential issues, I applied the display filter dns or tcp.analysis.flags, which helped highlight suspicious DNS queries and TCP anomalies. This step allowed me to pinpoint potential security threats and performance issues in the network."
-        ],
-        screenshot: "wireshark_packet_analysis"
+      interactiveGameplay: {
+        title: "Interactive Gameplay",
+        details: [
+          "Place ships on a 5x5 grid with intuitive touch controls.",
+          "Play turn-based games against opponents with clear visual feedback.",
+          "Track hits, misses, and shipwrecks with an intuitive board display."
+        ]
       },
-      {
-        title: "Report Generation",
-        scriptCommand: "python3 ~/pcap_files/analyze_dns.py",
-        cronJob: "0 2 * * * /home/haileystewart/pcap_files/generate_report.sh",
-        steps: [
-          "To automate the analysis and reporting, I created a custom Python script analyze_dns.py. This script processed the captured traffic and generated detailed reports. I tested the script manually by running python3 ~/pcap_files/analyze_dns.py in the terminal to ensure it worked correctly. To automate this process, I set up a cron job that ran the script daily at 2 AM using the command 0 2 * * * /home/haileystewart/pcap_files/generate_report.sh. This automation ensured that reports were generated and delivered consistently without manual intervention."
-        ],
-        screenshot: "python_script_execution"
+      aiIntegration: {
+        title: "AI Integration",
+        details: [
+          "Play against AI opponents with selectable difficulty levels (random or perfect)."
+        ]
       },
-      {
-        title: "Detailed Analysis",
-        steps: [
-          "With the cron job in place, I verified that it was running as scheduled. Each day, I checked my email for the daily report generated by the script. The report provided a comprehensive analysis of the network traffic, highlighting any anomalies or suspicious activities. This step ensured continuous monitoring and provided valuable insights into the network's security and performance."
-        ],
-        screenshot: "scheduled_email"
-      },
-      {
-        title: "Conclusion",
-        steps: [
-          "This methodology, involving real-time traffic capture, detailed analysis, automated reporting, and regular review, provided a robust framework for monitoring and securing the network. Each checkpoint contributed to a thorough understanding and proactive management of network traffic, making the project a success in terms of enhancing network security and performance."
+      responsiveDesign: {
+        title: "Responsive Design",
+        details: [
+          "Optimized for various screen sizes.",
+          "Optional side-by-side views for larger screens."
         ]
       }
-    ]
+    },
+    rulesOfTheGame: {
+      grid: {
+        title: "Grid",
+        details: "The board is a 5x5 grid labeled A1 to E5."
+      },
+      ships: {
+        title: "Ships",
+        details: "Each player places five ships, one per grid square."
+      },
+      turns: {
+        title: "Turns",
+        details: "Players take turns firing shots. Feedback on hits and misses is immediate."
+      },
+      winning: {
+        title: "Winning",
+        details: "The first player to sink all of the opponent’s ships wins."
+      },
+      forfeits: {
+        title: "Forfeits",
+        details: "Players can forfeit ongoing games by deleting them."
+      }
+    },
+    implementationHighlights: {
+      behavioralSpecifications: {
+        title: "Behavioral Specifications",
+        details: [
+          "Session tokens ensure secure and efficient user authentication.",
+          "Visual grid interface for placing ships and playing shots.",
+          "Clear differentiation of hits, misses, and sunk ships on the board."
+        ]
+      },
+      apiUtilization: {
+        title: "API Utilization",
+        details: [
+          "Authentication via /register and /login endpoints.",
+          "Game listing, creation, and updates through dedicated endpoints.",
+          "Support for fetching and updating game states in real-time."
+        ]
+      },
+      codeStructure: {
+        title: "Code Structure",
+        details: [
+          "Views: Modularized into separate files under lib/views.",
+          "Models: Encapsulation of data logic within lib/models.",
+          "Utils: Helper functions and shared utilities stored in lib/utils."
+        ]
+      },
+      responsiveness: {
+        title: "Responsiveness",
+        details: [
+          "Scaling the grid dynamically for optimal viewing across devices.",
+          "Smooth transitions between game list and gameplay views."
+        ]
+      }
+    },
+    howItWorks: {
+      step1: {
+        title: "Step 1",
+        details: "Register or log in to access the app."
+      },
+      step2: {
+        title: "Step 2",
+        details: "View active and completed games or start a new game."
+      },
+      step3: {
+        title: "Step 3",
+        details: "Place ships on the grid and start playing."
+      },
+      step4: {
+        title: "Step 4",
+        details: "Take turns firing shots and aim to sink all opponent’s ships."
+      },
+      step5: {
+        title: "Step 5",
+        details: "Win, lose, or forfeit as desired!"
+      }
+    },
+    learnMore: "For a detailed explanation of the RESTful API used in this project, check the API documentation provided in the project repository.",
+    githubLink: "https://github.com/haileystewart/battleship"
   }
 ];
   

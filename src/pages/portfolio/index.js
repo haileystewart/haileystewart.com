@@ -24,22 +24,18 @@ export const Portfolio = () => {
         </Row>
         <div className="portfolio-grid">
           {sortedPortfolio.map((data, i) => (
-            <div key={i} className="portfolio-item">
-              <hr className="t_border my-4 ml-0 text-left" />
-              <div className="portfolio-content">
-                <div className="portfolio-header">
-                  <h2 className="portfolio-title">
-                    <Link to={`/portfolio/${data.link}`}>{data.title}</Link>
-                  </h2>
-                  <p className="portfolio-description">{data.description}</p>
+            <Link to={`/portfolio/${data.link}`} key={i} className="portfolio-item-link">
+              <div className="portfolio-item">
+                <hr className="t_border my-4 ml-0 text-left" />
+                <div className="portfolio-content">
+                  <div className="portfolio-header">
+                    <h2 className="portfolio-title">{data.title}</h2>
+                    <p className="portfolio-description">{data.description}</p>
+                  </div>
+                  <span className="portfolio-date">{data.date}</span>
                 </div>
-                  {data.date ? (
-                    <span className="portfolio-date">{data.date}</span>
-                  ) : (
-                    <span className="portfolio-date">No Date Provided</span>
-                  )}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </Container>

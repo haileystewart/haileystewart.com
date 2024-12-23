@@ -57,10 +57,23 @@
   max-width: 200%;
   max-height: 200%;
   object-fit: contain;
-  transform: scale(2.5); /* 400% zoom */
+  transform: scale(2.5);
 }
 
 .clickable-image {
   max-width: 100%;
   cursor: pointer;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 40px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.section-link {
+  margin-left: 40px;
 }

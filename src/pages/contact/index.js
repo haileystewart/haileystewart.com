@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './style.css';
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col, Alert } from "react-bootstrap";
-import { meta } from "../../content_option";
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -72,8 +71,7 @@ function ContactUs() {
       <Container>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>{meta.title} | Contact</title>
-          <meta name="description" content={meta.description} />
+          <title>Contact Me</title>
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
           <Col lg="8">
@@ -82,18 +80,6 @@ function ContactUs() {
           </Col>
         </Row>
         <Row className="sec_sp">
-          <Col lg="12">
-            <Alert
-              variant={status.includes("success") ? "success" : "danger"}
-              className={`rounded-0 co_alert ${
-                status ? "d-block" : "d-none"
-              }`}
-              onClose={() => setStatus('')}
-              dismissible
-            >
-              <p className="my-0">{status}</p>
-            </Alert>
-          </Col>
           <Col lg="5" className="mb-5">
             <h3 className="color_sec py-4">Get in touch</h3>
             <address>
@@ -104,7 +90,9 @@ function ContactUs() {
                 <strong>Phone:</strong> (913) 777-6785
               </p>
             </address>
-            <p>I'm always excited to hear about new opportunities or collaborate on creative projects. Whether you have a question, a proposal, or simply want to say hello, don't hesitate to reach out. My inbox is always open and I strive to reply promptly.</p>
+            <p>
+              I'm always excited to hear about new opportunities or collaborate on creative projects. Whether you have a question, a proposal, or simply want to say hello, don't hesitate to reach out. My inbox is always open and I strive to reply promptly.
+            </p>
           </Col>
           <Col lg="7" className="d-flex align-items-center">
             <form onSubmit={handleSubmit} className="contact__form w-100">

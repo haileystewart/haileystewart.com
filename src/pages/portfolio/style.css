@@ -1,4 +1,4 @@
-:root {
+:root { 
   --bg-color: #EEEEEE;
   --primary-color: #EEEEEE;
   --secondary-color: #333333;
@@ -147,11 +147,10 @@ code {
   height: 100%;
 }
 
-.portfolio-item a {
+.portfolio-item-link {
   text-decoration: none;
-  color: var(--text-color);
-  transition: color 0.3s ease, font-weight 0.3s ease;
-  border: none !important;
+  color: inherit;
+  display: block; /* Ensure the entire block is clickable */
 }
 
 .portfolio-title {
@@ -160,20 +159,6 @@ code {
   margin-left: 0;
   font-weight: normal;
   transition: font-weight 0.3s ease;
-  border: none !important;
-}
-
-.portfolio-image {
-  width: 100%;
-  aspect-ratio: 1.414;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease;
-  border: none !important;
-}
-
-.portfolio-item:hover .portfolio-title {
-  font-weight: bold;
 }
 
 .portfolio-content {
@@ -215,6 +200,6 @@ code {
 
 @media (max-width: 768px) {
   .portfolio-grid {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }

@@ -82,47 +82,45 @@ const BotnetDetection = () => {
         </Col>
         </Row>
         <Row className="sec_sp">
-  <Col lg="5">
-    <h3 className="color_sec py-4">Results</h3>
-  </Col>
-  <Col lg="7" className="text-section">
-    <div>
-      {botnet_detection.results.phases.map((phase, index) => (
-        <div key={index} className="section-phase">
-          <h4 className="section-title">{phase.title}</h4>
-          {phase.paragraphs.map((paragraph, pIndex) => (
-            <React.Fragment key={pIndex}>
-              <p className="section-paragraph">{paragraph}</p>
-              {pIndex === 1 && phase.images?.[0] && (
-                <img
-                  src={phase.images[0].src}
-                  alt={phase.images[0].alt}
-                  className="result-image"
-                />
-              )}
-              {pIndex === 2 && phase.images?.[1] && (
-                <img
-                  src={phase.images[1].src}
-                  alt={phase.images[1].alt}
-                  className="result-image"
-                />
-              )}
-              {pIndex === 3 && phase.images?.[2] && (
-                <img
-                  src={phase.images[2].src}
-                  alt={phase.images[2].alt}
-                  className="result-image"
-                />
-              )}
-            </React.Fragment>
-          ))}
-        </div>
-      ))}
-    </div>
-  </Col>
-</Row>
-
-
+          <Col lg="5">
+            <h3 className="color_sec py-4">Results</h3>
+          </Col>
+          <Col lg="7" className="text-section">
+            <div>
+              {botnet_detection.results.phases.map((phase, index) => (
+                <div key={index} className="section-phase">
+                  <h4 className="section-title">{phase.title}</h4>
+                  {phase.paragraphs.map((paragraph, pIndex) => (
+                    <React.Fragment key={pIndex}>
+                      <p className="section-paragraph">{paragraph}</p>
+                      {pIndex === 1 && phase.images?.[0] && (
+                        <img
+                          src={phase.images[0].src}
+                          alt={phase.images[0].alt}
+                          className="result-image"
+                        />
+                      )}
+                      {pIndex === 2 && phase.images?.[1] && (
+                        <img
+                          src={phase.images[1].src}
+                          alt={phase.images[1].alt}
+                          className="result-image"
+                        />
+                      )}
+                      {pIndex === 3 && phase.images?.[2] && (
+                        <img
+                          src={phase.images[2].src}
+                          alt={phase.images[2].alt}
+                          className="result-image"
+                        />
+                      )}
+                    </React.Fragment>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </Col>
+        </Row>
         <Row className="sec_sp">
         <Col lg="5">
             <h3 className="color_sec py-4">{botnet_detection.comparison.title}</h3>
@@ -184,28 +182,33 @@ const BotnetDetection = () => {
         </Col>
         </Row>
         <Row className="sec_sp">
-        <Col lg="5">
+          <Col lg="5">
             <h3 className="color_sec py-4">Appendices</h3>
-        </Col>
-        <Col lg="7" className="text-section">
+          </Col>
+          <Col lg="7" className="text-section">
             <div>
-            {botnet_detection.appendices.sections.map((section, index) => (
-                <div key={index} className="section-phase">
-                <h4 className="section-title">{section.title}</h4>
-                <p className="section-paragraph">{section.description}</p>
-                <ul>
+              {botnet_detection.appendices.sections.map((section, index) => (
+                <div key={index} className="appendix-section">
+                  <h4 className="section-title">{section.title}</h4>
+                  <p className="section-paragraph">{section.description}</p>
+                  <ul>
                     {section.references.map((reference, refIndex) => (
-                    <li key={refIndex}>
-                        <a href={reference.link} target="_blank" rel="noopener noreferrer" className="section-link">
-                        {reference.text}
+                      <li key={refIndex}>
+                        <a
+                          href={reference.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="appendix-link"
+                        >
+                          {reference.text}
                         </a>
-                    </li>
+                      </li>
                     ))}
-                </ul>
+                  </ul>
                 </div>
-            ))}
+              ))}
             </div>
-        </Col>
+          </Col>
         </Row>
       </Container>
     </HelmetProvider>

@@ -89,3 +89,24 @@
   background: #f9f9f9;
 }
 
+.appendix-section ul {
+  list-style: none; /* Remove bullet points */
+  padding-left: 40px; /* Add indentation */
+  margin: 0; /* Remove any default margins */
+}
+
+.appendix-section li {
+  margin-bottom: 15px; /* Add spacing between references */
+}
+
+.appendix-link {
+  display: block; /* Ensure links start on their own line */
+  text-decoration: none; /* Remove underline by default */
+  color: var(--text-color); /* Match theme colors */
+  transition: color 0.3s ease; /* Add hover effect */
+}
+
+.appendix-link:hover {
+  text-decoration: underline; /* Add underline on hover */
+  color: var(--text-color-3); /* Change color on hover */
+}
