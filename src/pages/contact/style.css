@@ -1,22 +1,11 @@
-:root {
-    --bg-color: #EEEEEE;
-    --primary-color: #EEEEEE;
-    --secondary-color: #333333;
-    --text-color: #333333;
-    --text-color-2: #333333;
-    --text-color-3: #B4A1BB;
-    --overlay-color: #EEEEEE;
-}
-
-[data-theme="dark"] {
-    --bg-color: #333333;
-    --primary-color: #333333;
-    --secondary-color: #EEEEEE;
-    --text-color: #EEEEEE;
-    --text-color-2: #EEEEEE;
-    --text-color-3: #B4A1BB;
-    --overlay-color: #333333;
-}
+.contact-page .container {
+    margin: 0 !important; /* ✅ Remove extra margin */
+    padding: 80px 0 0 0 !important; /* ✅ Remove extra padding */
+    max-width: 100vw !important; /* ✅ Ensure full viewport width */
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+  }
 
 .contact-form {
     max-width: 600px;
@@ -128,7 +117,7 @@
 }
 
 .error {
-    color: #d80303;
+    color: #e43d34;
     font-size: 0.875em;
     margin-top: 5px;
 }

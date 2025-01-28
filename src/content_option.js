@@ -30,32 +30,28 @@ export const introdata = {
 //about page
 export const about = {
     dataabout: {
-      title: "Introduction",
-      aboutme: "I am a dedicated computer science student with a deep passion for cybersecurity. My journey in this field is driven by a commitment to safeguard digital information and a fascination with the ever-evolving landscape of network security. I have honed my skills through my portfolio projects and internships, where I've tackled challenges in data protection and network security. I'm always eager to learn, grow, and collaborate on projects that make the digital world safer and more secure.",
+      aboutme: "ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY",
     },
   
     worktimeline: [
       {
         jobtitle: "Security Operations Intern",
         where: "SelectQuote",
-        date: "05/2024 – 08/2024",
+        startMonth: "05",
+        endMonth: "08",
+        year: "2024",
         description: [
-          "Implemented absolute cryptographic wipe and offboarding processes, ensuring secure data deletion and compliance with security policies.",
-          "Conducted Active Directory (AD) cleaning and hardening, identifying low-confidence users and terminating inactive accounts to enhance security.",
-          "Installed and configured SentinelOne endpoint protection for UAT and development database servers, improving threat detection and response capabilities.",
-          "Managed Governance, Risk, and Compliance (GRC) using Onspring, streamlining security operations and maintaining regulatory compliance."
+          "Strengthened security by implementing cryptographic data wipes and improving offboarding processes to ensure compliance. Cleaned up and hardened Active Directory by identifying inactive accounts and reducing security risks. Deployed and configured SentinelOne for better threat detection and response while managing GRC operations to maintain regulatory compliance."
         ],
       },
       {
         jobtitle: "IT Infrastructure Intern",
         where: "Wi-Tronix",
-        date: "05/2023 – 12/2023",
+        startMonth: "05",
+        endMonth: "12",
+        year: "2023",
         description: [
-          "Developed and demoed a comprehensive incident response orchestration, enhancing cybersecurity response capabilities.",
-          "Conducted firewall and NAT rule cleanup, refining access controls and boosting network security.",
-          "Implemented AWS security recommendations, enhancing cloud security and regulatory compliance.",
-          "Executed switch configurations, optimizing network performance and ensuring adherence to best practices.",
-          "Performed systematic code upgrades on Juniper Switches, ensuring optimal performance and security."
+          "Enhanced cybersecurity by developing an incident response workflow and refining firewall/NAT rules to tighten network security. Applied AWS security best practices to strengthen cloud defenses. Upgraded Juniper switches to improve performance, reliability, and security across the network."
         ],
       },
     ],
@@ -70,16 +66,13 @@ export const about = {
       },
     ],
   
-    /*
     certifications: [
       {
-        name: "Comptia Security+",
-      },
-      {
         name: "AWS Certified Cloud Practitioner",
+        issuer: "Amazon Web Services",
+        date: "01/2025 - 01/2028"
       },
     ],
-    */
   
     technicalSkills: [
       {
@@ -181,66 +174,227 @@ export const about = {
   
 //portfolio page
 export const dataportfolio = [
-    /*
-    {
-      title: "Home Lab Configuration",
-      description: "A detailed configuration of a home lab environment using various technologies.",
-      date: "2023-03-01",
-      link: "project1"
-    },
-    */
-    {
-      title: "RESTful Battleships Game Application",
-      description: "A Flutter-based application integrating with a RESTful API to enable user registration, login, and playing Battleships against human or AI opponents, with features for game management, responsive UI, and real-time game state updates.",
-      date: "2023-11-25",
-      link: "battleship"
-    },
-    {
-      title: "Improving Botnet Detection and Mitigation Techniques Using Machine Learning",
-      description: "A graduate-level research paper on advanced botnet detection methods using rule-based and machine learning techniques.",
-      date: "2024-11-01",
-      link: "botnet_detection"
-    },
-    {
-      title: "AWS Hangman Server",
-      description: "A multithreaded client-server Hangman game implemented in C, showcasing network programming, multithreading, and cloud deployment on AWS.",
-      date: "2024-10-14",
-      link: "aws_hangman_server"
-    }
+  {
+    title: "Cryptographic Hashing and RSA Implementation",
+    link: "sha256_rsa_implementation",
+    color: "#87C498"
+  },
+  {
+    title: "RESTful Battleships Game Application",
+    link: "battleship",
+    color: "#EA6B62"
+  },
+  {
+    title: "Improving Botnet Detection and Mitigation Techniques Using Machine Learning",
+    link: "botnet_detection",
+    color: "#EF8F79"
+  },
+  {
+    title: "AWS Hangman Server",
+    link: "aws_hangman_server",
+    color: "#B695A8"
+  },
+  {
+    title: "project",
+    link: "homepage",
+    color: "#F39C4F"
+  },
+  {
+    title: "project",
+    link: "homepage",
+    color: "#F5B77C"
+  },
+  {
+    title: "project",
+    link: "homepage",
+    color: "#FEDD58"
+  },
+  {
+    title: "project",
+    link: "homepage",
+    color: "#D9DB56"
+  },
+  {
+    title: "project",
+    link: "homepage",
+    color: "#DDD1A9"
+  },
+  {
+    title: "project",
+    link: "homepage",
+    color: "#1AAFAB"
+  },
+  {
+    title: "project",
+    link: "homepage",
+    color: "#90CECD"
+  },
+  {
+    title: "project",
+    link: "homepage",
+    color: "#6EB0E0"
+  },
+  {
+    title: "project",
+    link: "homepage",
+    color: "#EE7C23"
+  },
+  {
+    title: "project",
+    link: "homepage",
+    color: "#D0B8C6"
+  },
+  {
+    title: "project",
+    link: "homepage",
+    color: "#E43D34"
+  },
+  {
+    title: "project",
+    link: "homepage",
+    color: "#B8D7AD"
+  },
+  {
+    title: "project",
+    link: "homepage",
+    color: "#D3B09D"
+  },
+  {
+    title: "project",
+    link: "homepage",
+    date: "01/2025",
+    color: "#E7D1C3"
+  },
+  {
+    title: "project",
+    link: "homepage",
+    color: "#CD80A2"
+  },
+  {
+    title: "project",
+    link: "homepage",
+    color: "#9D948F"
+  },
+  {
+    title: "project",
+    link: "homepage",
+    color: "#FBC352"
+  },
+  {
+    title: "project",
+    link: "homepage",
+    color: "#9FB9AE"
+  },
+  {
+    title: "project",
+    link: "homepage",
+    color: "#DFDAD6"
+  },
+  {
+    title: "project",
+    link: "homepage",
+    color: "#96C0D6"
+  },
 ];
 
-//project1
-export const project1 = {
-    title: "Home Lab Configuration",
-    overview: "The Home Lab Configuration project was designed to set up a virtual environment for advancing cybersecurity skills. This involved creating and managing virtual machines (VMs) to simulate a realistic IT infrastructure, enabling the completion of various security projects.",
-    purpose: [
-      "The primary purpose of this project was to establish a virtual machine setup for conducting security exercises.",
-      "Key challenges included overcoming hardware limitations by upgrading RAM and SSD, and configuring a virtual network to simulate real-world conditions.",
-      "This setup provided a practical learning experience in network configurations and security."
-    ],
-    keyGoals: [
-      "Set up network monitoring tools.",
-      "Capture and store network traffic data.",
-      "Analyze network traffic to identify anomalies.",
-      "Generate reports on network activity and potential threats."
-    ],
-    scope: [
-      ["Deployment", "The scope of this project includes the deployment of network monitoring tools, data capture, data analysis, and reporting."],
-      ["Coverage", "It covers both internal and external network traffic."]
-    ],
-    toolsTech: [
-      ["Kali Linux", "Linux distribution for penetration testing and security auditing"],
-      ["Oracle VM VirtualBox", "Virtualization product for x86 computers"],
-      ["Wireshark", "Network protocol analyzer"]
-    ],
-    skills: [
-      ["Network Configuration and Security", "Set up and managed a multi-tiered network environment, implemented firewalls, and understood network traffic control."],
-      ["System Administration", "Managed multiple VMs, optimized resource allocation, and monitored performance."],
-      ["Cybersecurity Principles", "Applied ethical hacking, penetration testing, and security hardening."],
-      ["Technical Troubleshooting", "Diagnosed and resolved technical issues across software, hardware, and networks."],
-      ["Security Best Practices", "Explored and implemented industry-standard security practices and protocols."]
-    ],
-    methodology: "The methodology involved setting up necessary tools, capturing network traffic, analyzing data, and generating comprehensive reports on findings."
+//sha256_rsa_implementation
+export const sha256_rsa_implementation = {
+  title: "Cryptographic Hashing and RSA Implementation",
+  overview: [
+    "This project is a deep dive into cryptographic hashing and RSA encryption, showcasing foundational cybersecurity principles and their practical applications. The goal was to explore the properties and performance of SHA-256, a widely-used cryptographic hash function, and implement secure communication using RSA public-key cryptography. Through this work, I aimed to demonstrate proficiency in analyzing cryptographic algorithms, validating their mathematical underpinnings, and solving real-world cybersecurity problems.",
+    "Key technologies and concepts applied in this project include the SHA-256 hash function for data integrity verification and randomness analysis, as well as the RSA cryptosystem for secure message signing and encryption. By combining programmatic implementations, statistical analysis, and cryptographic workflows, this project highlights the interplay between theory and practice in designing and evaluating secure systems."
+],
+keyFeatures: [
+  {
+      title: "SHA-256 Hash Computation and Analysis",
+      points: [
+          "Computed the SHA-256 hash of a given input (e.g., a name) and output the result in hexadecimal format.",
+          "Generated multiple unique inputs to analyze the statistical distribution of 1-bits in the resulting hash values.",
+          "Visualized the bit distribution through a histogram, revealing the inherent randomness of the SHA-256 algorithm."
+      ]
+  },
+  {
+      title: "Performance Benchmarking of SHA-256",
+      points: [
+          "Measured the speed of hash computations, reporting both total execution time and hashes computed per second.",
+          "Estimated the time required to perform theoretical attacks, such as a birthday attack for weak collision resistance and a brute-force attack for strong collision resistance."
+      ]
+  },
+  {
+      title: "RSA Message Signing and Secure Communication",
+      points: [
+          "Implemented RSA public-key cryptography to simulate secure communication between two parties (Bob and Alice).",
+          "Bob signed a message using his private key and encrypted the signature with Alice's public key, ensuring both authenticity and confidentiality.",
+          "Alice decrypted the received message, verified its signature, and authenticated Bob's identity, completing the secure communication process."
+      ]
+  }
+],
+technicalSkills: [
+  {
+      category: "Cryptographic Libraries",
+      description: "Utilized Python's hashlib library for implementing SHA-256 hash computations and generating outputs in hexadecimal format."
+  },
+  {
+      category: "Data Analysis and Visualization",
+      description: "Leveraged tools like matplotlib to create detailed histograms, illustrating the statistical distribution of 1-bits in SHA-256 hash outputs."
+  },
+  {
+      category: "Performance Benchmarking",
+      description: "Developed and executed techniques to measure computational performance, reporting hash rates and estimating attack durations."
+  },
+  {
+      category: "Public-Key Cryptography",
+      description: "Implemented RSA workflows, including key generation, message signing, encryption, and decryption, ensuring secure and authenticated communication."
+  },
+  {
+      category: "Mathematical Validation",
+      description: "Applied binomial probability distributions to validate the randomness of SHA-256 bit distributions, utilizing tools like Mathematica for precise calculations."
+  }
+],
+  codeExplanation: [
+    {
+      title: "SHA-256 Hash Generation",
+      code: "hash_name.py",
+      description: "Computes the SHA-256 hash for a given input string and outputs it in hexadecimal format. This demonstrates cryptographic hashing for data integrity."
+    },
+    {
+      title: "Statistical Analysis of 1-Bits in Hash Outputs",
+      code: "bit_count_histogram.py",
+      description: "Generates random inputs, computes their SHA-256 hashes, counts 1-bits, and visualizes the results using a histogram to analyze randomness."
+    },
+    {
+      title: "Performance Benchmarking of SHA-256",
+      code: "hash_timing.py",
+      description: "Computes a specified number of hashes, measures execution time, calculates hash rate, and estimates durations for theoretical cryptographic attacks."
+    },
+    {
+      title: "Binomial Probability Validation",
+      code: "binomial_probability.py",
+      description: "Calculates probabilities of specific numbers of 1-bits appearing in a hash output, validating randomness using mathematical models."
+    }
+  ],
+  histogramExplanation: [
+    {
+      title: "Histogram of 1-Bits in SHA-256 Hash Outputs",
+      description: "Visualizes the distribution of 1-bits in SHA-256 hash outputs. The histogram closely follows a binomial distribution, centered around 128 1-bits, confirming the uniform randomness of SHA-256."
+    }
+  ],
+  projectFlow: [
+    "SHA-256 hash generation begins by accepting user input and generating a hash value in hexadecimal format using Python’s hashlib library.",
+    "Random inputs are created to analyze the distribution of 1-bits across multiple SHA-256 outputs. These distributions are visualized using histograms for statistical analysis.",
+    "The benchmarking script measures hash computation performance by reporting execution times and estimating durations for theoretical attacks such as birthday and brute-force.",
+    "The RSA module demonstrates secure communication. Messages are signed using private keys, encrypted with public keys, and verified upon decryption, ensuring authenticity and confidentiality."
+  ],
+  implementation: [
+    "This project applies cryptographic and statistical methods to analyze and validate the properties of hashing algorithms and public-key encryption.",
+    "The SHA-256 analysis involves generating hashes, measuring randomness, and ensuring the algorithm meets theoretical expectations. Histograms of bit distributions verify randomness.",
+    "Performance benchmarking evaluates computational efficiency, demonstrating how practical constraints influence cryptographic feasibility in real-world applications.",
+    "The RSA implementation showcases secure communication workflows. By integrating signing, encryption, and authentication, the project simulates modern security practices."
+  ],
+  conclusion: [
+    "This project exemplifies the critical role of cryptography in securing digital systems and highlights the practical application of theoretical cybersecurity principles. By exploring SHA-256 hash functions and RSA cryptography, I delved into the mathematical and computational foundations of data integrity, randomness, and secure communication. The project provided hands-on experience in analyzing cryptographic functions, validating their security properties, and understanding their performance implications in real-world scenarios.",
+    "Through this work, I gained a deeper understanding of how cryptographic systems are designed and evaluated for robustness. It honed my skills in using cryptographic libraries, conducting statistical and performance analyses, and implementing secure workflows. This project not only enhanced my technical competencies but also reinforced the importance of precision and rigor in developing and assessing secure systems.",
+]
 };
 
 // battleship

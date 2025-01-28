@@ -1,73 +1,460 @@
+/* Global section spacing */
 .sec_sp {
-    padding: 30px 0;
+  padding: 50px 0;  /* Increased spacing for sections */
+}
+
+.About-header {
+  padding-bottom: 60px;
+}
+
+@-webkit-keyframes animate-positive {
+  0% {
+    width: 0%;
   }
-  
-  .table td,
-  .table th {
-    color: var(--text-color);
+}
+
+@keyframes animate-positive {
+  0% {
+    width: 0%;
   }
-  
-  .t_border {
-    border-color: var(--text-color) !important;
+}
+
+/* Hero Section (Combining Title & Text Box) */
+.hero-section {
+  position: relative;
+  width: 100vw;
+  text-align: center;
+  padding: 200px 0 100px; /* Adjust for spacing */
+  overflow: hidden;
+}
+
+/* Scrolling Title */
+.scrolling-title {
+  width: 100vw;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding: 0; /* Remove extra padding */
+}
+
+/* Scrolling Text */
+.scrolling-text {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 86px;
+  font-weight: bold;
+  font-family: "Marcellus", serif;
+  text-transform: uppercase;
+  color: var(--color-25);
+  animation: scrollText 20s linear infinite;
+  width: 200%;
+}
+
+/* Each span repeats the text multiple times */
+.scrolling-text span {
+  display: inline-block;
+  min-width: 100%;
+}
+
+/* Smooth Scrolling Effect */
+@keyframes scrollText {
+  from {
+    transform: translateX(0%);
   }
-  
-  .progress-title {
-    font-size: 1rem; 
-    font-weight: 700;
-    margin: 15px 0 20px;
-    font-family: 'Raleway';
+  to {
+    transform: translateX(-50%);
   }
+}
+
+/* About Text Box */
+.about-text-box {
+  position: relative; /* Keep it relative */
+  width: 40%; /* Adjust for better layout */
+  max-width: 700px;
+  font-size: 16px;
+  font-family: "Marcellus", serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  text-align: left;
+  margin: 50px auto 0; /* Center below scrolling title */
+}
+
+/* Unified Section Container */
+.section-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 100px;
+  padding: 50px 0 100px 0;
+}
+
+/* Section Title */
+.about-section-title {
+  font-size: 40px;
+  font-family: "Marcellus", serif;
+  color: var(--color-25);
+  line-height: 1.4;
+  width: 60%; /* Title takes up 60% */
+}
+
+/* Subtext */
+.subtext {
+  font-size: 18px;
+  font-weight: normal;
+  color: var(--color-25);
+}
+
+/* Section Text */
+.about-section-text {
+  width: 40%; /* Text takes up 40% */
+  font-size: 16px;
+  font-family: "Marcellus", serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  text-align: left;
+}
+
+/* Certifications Section */
+.certifications-section {
+  margin: 0 100px; /* 100px left/right margin */
+  padding: 50px 0 100px 0; /* 50px top/bottom padding */
+}
+
+/* Certifications Intro Paragraph */
+.certifications-intro {
+  font-size: 18px;
+  font-family: "Marcellus", serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+/* Certifications Table */
+.certifications-table {
+  width: 625px;
+  font-size: 14px;
+  font-family: "Marcellus", serif;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+}
+
+/* Table Rows & Borders */
+.certifications-table tr {
+  border-bottom: 1px solid var(--text-color);
+}
+
+/* Table Cells */
+.certifications-table td {
+  padding: 15px;
+  text-align: left;
+}
+
+/* Work Experience Section */
+.work-experience-section {
+  margin: 0 100px;
+  padding: 50px 0 100px 0;
+}
+
+/* Work Experience Header */
+.work-experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Work Title */
+.work-title {
+  font-size: 32px;
+  font-family: "Marcellus", serif;
+  color: var(--color-25);
+  max-width: 50%;
+}
+
+/* Work Subtitle + Timeline Column */
+.work-column {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Work Subtitle */
+.work-subtitle {
+  font-size: 18px;
+  font-family: "Marcellus", serif;
+  color: var(--text-color);
+}
+
+/* Work Timeline (Now Inside the Column) */
+.work-timeline {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%; /* Matches subtitle width */
+}
+
+/* Timeline Container - Holds Vertical Line */
+.timeline-container {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+}
+
+/* Continuous Vertical Line - Responsive */
+.timeline-line {
+  position: absolute;
+  left: 28px;
+  top: 0;
+  width: 1px;
+  background-color: var(--text-color);
+  z-index: 1;
   
-  .progress {
-    height: 5px;
-    background: var(--secondary);
-    border-radius: 0;
-    box-shadow: none;
-    margin-bottom: 30px;
-    overflow: visible;
+  /* Default height for standard screen sizes */
+  height: calc(100% - 110px); 
+}
+
+/* Adjustments for Larger Screens */
+@media (min-width: 1600px) {
+  .timeline-line {
+    height: calc(100% - 90px); /* Increase height */
   }
-  
-  .progress .progress-bar {
-    position: relative;
-    background: var(--text-color);
-    animation: animate-positive 2s;
-    overflow: visible;
-    opacity: 0.9;
+}
+
+@media (min-width: 1800px) {
+  .timeline-line {
+    height: calc(100% - 80px);
   }
-  
-  .progress .progress-value {
-    position: absolute;
-    top: -30px;
-    right: 8px;
-    font-size: 17px;
-    font-weight: bold;
-    font-style: italic;
-    color: var(--text-color);
+}
+
+@media (min-width: 2000px) {
+  .timeline-line {
+    height: calc(100% - 80px);
   }
-  
-  .education-item p {
-    font-size: 1rem; 
-    margin: 10px 0;
+}
+
+/* Adjustments for Smaller Screens */
+@media (max-width: 1200px) {
+  .timeline-line {
+    height: calc(100% - 120px);
   }
-  
-  .education-specialization {
-    margin-top: 5px;
-    padding-left: 40px;
+}
+
+@media (max-width: 1024px) {
+  .timeline-line {
+    height: calc(100% - 130px);
   }
-  
-  .About-header {
-    padding-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .timeline-line {
+    height: auto; /* Fully adapts to content */
   }
-  
-  @-webkit-keyframes animate-positive {
-    0% {
-      width: 0%;
-    }
+}
+
+/* Stop the vertical line at the last item */
+.timeline-item.last-item .timeline-line {
+  height: 90%;
+}
+
+/* Timeline Content */
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Timeline Item */
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+/* Left Section: Number with Background */
+.timeline-left {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 15px;
+  background-color: var(--bg-color);
+  border-radius: 5px;
+  z-index: 2;
+}
+
+/* Timeline Number */
+.timeline-number {
+  font-size: 16px;
+  color: var(--color-25);
+  margin-left: 5px;
+}
+
+/* Right Section: Title + Description */
+.timeline-right {
+  max-width: 100%;
+  padding-left: 20px;
+}
+
+/* Title */
+.timeline-title {
+  font-size: 16px;
+  font-family: "Marcellus", serif;
+  color: var(--color-25);
+}
+
+/* Description */
+.timeline-description {
+  font-size: 16px;
+  font-family: "Marcellus", serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Work Stats */
+.work-stats {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px; /* Ensures space above stats */
+}
+
+.stat-item-left {
+  text-align: left;
+  width: 30%;
+}
+
+.stat-item-middle {
+  text-align: left;
+  width: 14%;
+}
+
+.stat-item-right {
+  text-align: left;
+  width: 15%;
+}
+
+.stat-title {
+  font-size: 18px;
+  font-family: "Marcellus", serif;
+  color: var(--text-color);
+}
+
+.stat-number {
+  font-size: 32px;
+  font-family: "Marcellus", serif;
+  color: var(--text-color);
+  margin-top: 10px;
+}
+
+/* Technical Skills Section */
+.technical-skills-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 100px; /* 100px left/right margin */
+  padding: 50px 0 100px 0; /* 50px top/bottom padding */
+}
+
+/* Skills Table - Left Side */
+.skills-table-container {
+  flex: 1;
+  width: 43vw; /* Scales dynamically with screen width */
+  max-width: 800px; /* Prevents it from getting too large */
+  padding: 0 40px 0 0;
+}
+
+/* Skills Table */
+.skills-table {
+  width: 100%;
+  font-size: 16px;
+  font-family: "Marcellus", serif;
+  border-collapse: collapse;
+}
+
+/* Table Borders */
+.skills-table tr {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.skills-table tr:first-child {
+  border-top: 1px solid var(--text-color);
+}
+
+/* Add Bottom Border */
+.skills-table tr:last-child {
+  border-bottom: 1px solid var(--text-color);
+}
+
+/* Table Cells */
+.skills-table td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Adjust First Column (Numbers) */
+.skills-table td:first-child {
+  width: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Adjust Second Column (Technical Skill) */
+.skills-table td:nth-child(2) {
+  width: 200px;
+  color: var(--text-color);
+}
+
+/* Skills Text (Title & Subtitle) - Right Side */
+.skills-text {
+  width: 40%;
+  text-align: left;
+  padding: 0 0 0 40px;
+}
+
+/* Title */
+.skills-title {
+  font-size: 32px;
+  font-family: "Marcellus", serif;
+  color: var(--color-25);
+  margin-bottom: 15px;
+}
+
+/* Subtitle */
+.skills-subtitle {
+  font-size: 18px;
+  font-family: "Marcellus", serif;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+/* Unified Content Wrapper - Keeps Content Centered */
+.content-wrapper {
+  margin: 0 auto; /* Centers content */
+  padding: 0 0px; /* Default margin for screens ≤1440px */
+}
+
+/* Adjustments for Larger Screens */
+@media (min-width: 1600px) {
+  .content-wrapper {
+    padding: 0 0px; /* Increase side margins */
   }
-  
-  @keyframes animate-positive {
-    0% {
-      width: 0%;
-    }
+}
+
+@media (min-width: 1800px) {
+  .content-wrapper {
+    padding: 0 0px;
   }
-  
+}
+
+@media (min-width: 2000px) {
+  .content-wrapper {
+    padding: 0 0px;
+  }
+}
+
+@media (min-width: 2200px) {
+  .content-wrapper {
+    padding: 0 0px;
+  }
+}

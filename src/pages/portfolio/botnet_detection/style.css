@@ -1,11 +1,3 @@
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 60px; 
-  width: 100%;
-  padding-bottom: 60px;
-}
-
 .portfolio-item {
   position: relative;
   overflow: hidden;
@@ -45,12 +37,6 @@
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .section-phase {
   margin-bottom: 20px; /* Add spacing between phases/sections */
 }
@@ -76,7 +62,7 @@
 
 .section-link:hover {
   text-decoration: underline; /* Add underline on hover */
-  color: var(--text-color-3); /* Change color to --text-color-3 on hover */
+  color: var(--color-24);
 }
 
 .result-image {
@@ -108,5 +94,5 @@
 
 .appendix-link:hover {
   text-decoration: underline; /* Add underline on hover */
-  color: var(--text-color-3); /* Change color on hover */
+  color: var(--color-24); /* Change color on hover */
 }

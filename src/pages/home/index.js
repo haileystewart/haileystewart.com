@@ -1,7 +1,6 @@
 import React from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import Typewriter from "typewriter-effect";
 import { introdata, meta } from "../../content_option";
 import { Link } from "react-router-dom";
 
@@ -11,58 +10,46 @@ export const Home = () => {
       <section id="home" className="home">
         <Helmet>
           <meta charSet="utf-8" />
-          <title> {meta.title}</title>
+          <title>{meta.title}</title>
           <meta name="description" content={meta.description} />
         </Helmet>
-        <div className="intro_sec d-block d-lg-flex align-items-center ">
-          <div
-            className="h_bg-image order-1 order-lg-2 h-100 "
-            style={{ backgroundImage: `url(${introdata.img})` }}
-          ></div>
-          <div className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-center">
-            <div className="align-self-center ">
-              <div className="intro mx-auto">
-                <h2 className="mb-1x">{introdata.title}</h2>
-                <h1 className="fluidz-48 mb-1x">
-                  <Typewriter
-                    options={{
-                      strings: [
-                        introdata.animated.first,
-                        introdata.animated.second,
-                        introdata.animated.third,
-                        introdata.animated.fourth,
-                      ],
-                      autoStart: true,
-                      loop: true,
-                      deleteSpeed: 10,
-                    }}
-                  />
-                </h1>
-                <p className="mb-1x">{introdata.description}</p>
-                <div className="intro_btn-action pb-5">
-                  <Link to="/portfolio" className="text_2">
-                    <div id="button_p" className="ac_btn btn ">
-                      My Portfolio
-                      <div className="ring one"></div>
-                      <div className="ring two"></div>
-                      <div className="ring three"></div>
-                    </div>
-                  </Link>
-                  <Link to="/contact">
-                    <div id="button_h" className="ac_btn btn">
-                      Contact Me
-                      <div className="ring one"></div>
-                      <div className="ring two"></div>
-                      <div className="ring three"></div>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
+
+        <div className="home_sec"> {/* Fixed className here */}
+          {/* Large Heading Text */}
+          <div className="home_text">
+            <p>
+              a <span>cybersecurity analyst</span> with a passion for{" "}
+              <span>threat analyst</span>, <span>incident response</span>, and{" "}
+              <span>cloud security</span>.
+            </p>
+          </div>
+
+          {/* Right-aligned Paragraph */}
+          <div className="home_description">
+            <p>
+              I'm Hailey, and I strive to uncover simple yet powerful solutions
+              in my work—solutions that enhance security resilience and mitigate
+              emerging threats. My expertise spans from security architecture
+              and digital forensics to proactive threat intelligence and cloud
+              security strategies. I am particularly interested in identifying
+              vulnerabilities and implementing defenses that fortify
+              organizations against cyber risks.
+            </p>
           </div>
         </div>
+
+        {/* Navigation Grid */}
+        <div className="nav_grid">
+          <Link to="/portfolio" className="nav_item">PORTFOLIO</Link>
+          <Link to="/about" className="nav_item">ABOUT</Link>
+          {/* 
+          <Link to="/photography" className="nav_item">PHOTOGRAPHY</Link>
+          <Link to="/feed" className="nav_item">FEED</Link>
+          */}
+          <Link to="/contact" className="nav_item">CONTACT</Link>
+        </div>
+
       </section>
     </HelmetProvider>
   );
 };
-

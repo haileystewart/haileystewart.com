@@ -1,23 +1,3 @@
-:root { 
-  --bg-color: #EEEEEE;
-  --primary-color: #EEEEEE;
-  --secondary-color: #333333;
-  --text-color: #333333;
-  --text-color-2: #333333;
-  --text-color-3: #B4A1BB;
-  --overlay-color: #EEEEEE;
-}
-
-[data-theme="dark"] {
-  --bg-color: #333333;
-  --primary-color: #333333;
-  --secondary-color: #EEEEEE;
-  --text-color: #EEEEEE;
-  --text-color-2: #EEEEEE;
-  --text-color-3: #B4A1BB;
-  --overlay-color: #333333;
-}
-
 html, body {
   height: 100%;
 }
@@ -79,127 +59,184 @@ code {
   margin-top: 20px;
 }
 
-.table {
-  background-color: var(--bg-color);
-  border-collapse: collapse;
+/* 🌟 Ensure Borders Are Visible on Portfolio Page */
+.portfolio-page .br-right,
+.portfolio-page .br-left,
+.portfolio-page .br-top,
+.portfolio-page .br-bottom {
+  display: block !important; /* ✅ Makes sure borders are shown */
+  position: absolute;
+}
+
+/* 🌟 Position Borders Correctly */
+.br-top {
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 10px; /* Adjust thickness */
 }
 
-.table td, .table th {
-  color: var(--text-color);
-  padding: 5px;
-  text-align: left;
-  border-bottom: 1px solid var(--text-color);
-  background-color: var(--bg-color);
+.br-bottom {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px; /* Adjust thickness */
 }
 
-.table th {
-  font-weight: bold;
-  border-bottom: 1px solid var(--text-color);
+.br-left {
+  top: 0;
+  left: 0;
+  width: 10px; /* Adjust thickness */
+  height: 100vh;
 }
 
-.table tr:last-child td {
-  border-bottom: 1px solid var(--text-color);
+.br-right {
+  top: 0;
+  right: 0;
+  width: 10px; /* Adjust thickness */
+  height: 100vh;
 }
 
-.table tr:hover {
-  background-color: var(--secondary-color);
-}
-
-.table td:first-child {
-  padding-left: 0;
-  width: 200px;
-}
-
-.table td:first-child.bold-column {
-  font-weight: bold;
-}
-
-.table td:last-child, .table th:last-child {
-  padding-right: 0;
-}
-
-.table caption {
-  caption-side: top;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--text-color);
-  margin-bottom: 8px;
-}
-
-.portfolio-grid {
+/* 🌟 Portfolio Grid - Ensure No Conflicts */
+.portfolio-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  width: 100%;
-  padding-bottom: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Dynamically fit columns */
+  width: 100vw; /* ✅ Ensures full width */
+  padding: 0 !important;
+  margin: 0 auto;
+  gap: 0;
+  justify-content: center;
+  align-content: center;
+
 }
 
-.portfolio-item {
-  position: relative;
+/* 🌟 Portfolio Block - Ensures Containment */
+.portfolio-block {
+  width: 100%;
+  height: 420px;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; /* ✅ Prevents hover effect from overflowing */
+  contain: layout paint; /* ✅ Limits effects to this block */
+}
+
+/* 📌 Portfolio Item Link */
+.portfolio-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+/* 📌 Portfolio Card - Adjusted for Oval Expansion */
+.portfolio-card {
+  width: 100%;
+  height: 420px;
   display: flex;
   flex-direction: column; 
-  padding: 20px;
-  border: 1px solid var(--secondary-color);
-  border-radius: 8px;
-  background: var(--bg-color);
-  overflow: hidden;
-  height: 100%;
-}
-
-.portfolio-item-link {
-  text-decoration: none;
-  color: inherit;
-  display: block; /* Ensure the entire block is clickable */
-}
-
-.portfolio-title {
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-  margin-left: 0;
-  font-weight: normal;
-  transition: font-weight 0.3s ease;
-}
-
-.portfolio-content {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-between;
-}
-
-.portfolio-header {
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-.portfolio-date {
-  font-size: 1rem;
-  color: var(--text-color);
-  margin-top: 10px;
-}
-
-.portfolio-footer {
-  display: flex; 
   justify-content: space-between; 
   align-items: center; 
-  margin-top: auto;
-  overflow: hidden; 
+  text-align: center;
+  padding: 10px 0; 
+  margin: 0;
+  position: relative;
+  transition: transform 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+  will-change: transform;
 }
 
-.t_border {
-  border: none; 
-  border-top: 1px solid var(--text-color); 
-  width: 100%; 
-  margin: 20px 0;
+/* 🌟 Hover Effect - Ensures Full Oval */
+.portfolio-card:hover {
+  transform: scale(1.1);
+  border-radius: 50%;
+  z-index: 10; /* ✅ Ensures it stays above other elements */
 }
 
-.portfolio-item hr.t_border {
-  margin: 10px 0;
+/* ✅ Title at the Top */
+.portfolio-heading {
+  position: relative;
+  z-index: 2;
+  font-weight: normal !important;
+  font-size: 16px !important;
+  line-height: 1.4;
+  padding-top: 10px; /* ✅ Add space at the top */
+  text-align: center;
+  width: 100%;
+}
+
+/* 📌 Centered Description (Optional) */
+.portfolio-text {
+  position: relative;
+  z-index: 2;
+  font-weight: normal !important;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* ✅ Date at the Bottom */
+.portfolio-date {
+  position: relative;
+  z-index: 2;
+  font-weight: normal !important;
+  font-size: 16px !important;
+  line-height: 1.4;
+  padding-bottom: 10px; /* ✅ Add space at the bottom */
+  text-align: center;
+  width: 100%;
+}
+
+/* 📌 Responsive Grid - Adapt to Screen Sizes */
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Auto-fit for medium screens */
+  }
 }
 
 @media (max-width: 768px) {
   .portfolio-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
   }
+}
+
+@media (max-width: 480px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  }
+}
+
+/* 🌟 Hide Follow Me on Portfolio Page */
+body.portfolio-page .follow-me,
+body.portfolio-page .stick_follow_icon {
+  display: none !important;
+}
+
+/* Remove margins and ensure full width */
+.About-header {
+  margin: 0 !important; /* ✅ Remove extra margin */
+  padding: 80px 0 0 0 !important; /* ✅ Remove extra padding */
+  max-width: 100vw !important; /* ✅ Ensure full viewport width */
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🌟 Center Portfolio Wrapper */
+.portfolio-wrapper {
+  max-width: 1600px; /* ✅ Set max width */
+  width: 100%; /* ✅ Ensures responsiveness */
+  margin: 0 auto; /* ✅ Centers horizontally */
+  padding: 20px; /* ✅ Adds spacing */
+}
+
+/* 🌟 Center Portfolio Grid */
+.portfolio-container {
+  max-width: 1600px; /* ✅ Prevents stretching */
+  width: 100%;
+  margin: 0 auto; /* ✅ Centers grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0;
+  justify-content: center;
+  align-content: center;
 }

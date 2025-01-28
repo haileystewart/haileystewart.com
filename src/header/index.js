@@ -1,13 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 import { VscGrabber, VscClose } from "react-icons/vsc";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { logotext, socialprofils } from "../content_option";
 import Themetoggle from "../components/themetoggle";
 import Breadcrumb from "../components/breadcrumb/breadcrumb";
 
 const Headermain = () => {
   const [isActive, setActive] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/portfolio") {
+      document.body.classList.add("portfolio-page");
+    } else {
+      document.body.classList.remove("portfolio-page");
+    }
+  }, [location.pathname]);
 
   const handleToggle = () => {
     setActive(!isActive);

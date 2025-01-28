@@ -1,9 +1,11 @@
+/* Mobile-specific styles */
 @media only screen and (max-width: 991px) {
     .s_c {
         padding-top: 40px;
     }
 }
 
+/* Page transition animations */
 .page-enter {
     transform: translateY(100%);
 }
@@ -30,6 +32,19 @@
     transition: all 400ms ease-out;
 }
 
+/* Default container width (for smaller screens) */
+.container, 
+.container-lg, 
+.container-md, 
+.container-sm, 
+.container-xl, 
+.container-xxl {
+    max-width: 1140px; /* Default width */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Medium screen - Adjusts container width at 1400px */
 @media (min-width: 1400px) {
     .container,
     .container-lg,
@@ -37,10 +52,42 @@
     .container-sm,
     .container-xl,
     .container-xxl {
-        max-width: 1140px;
+        max-width: 1300px;
     }
 }
 
+/* Larger screen - Adjusts container width at 1500px */
+@media (min-width: 1500px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1400px;
+    }
+}
+
+/* Even larger screen - Adjusts container width at 1600px */
+@media (min-width: 1600px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1500px;
+    }
+}
+
+/* Maximum width for ultra-wide screens */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1600px; /* Prevent excessive stretching */
+    }
+}
+
+/* Ensures padding at the bottom of main content */
 .main-content.with-padding {
     padding-bottom: 20px;
 }

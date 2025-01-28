@@ -148,6 +148,8 @@ function ContactUs() {
   return (
     <HelmetProvider>
       <Container>
+      <div class="contact-page">
+      <div class="container">
         <Helmet>
           <meta charSet="utf-8" />
           <title>Contact Me</title>
@@ -226,6 +228,8 @@ function ContactUs() {
             </form>
           </Col>
         </Row>
+        </div>
+        </div>
       </Container>
     </HelmetProvider>
   );

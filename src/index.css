@@ -1,24 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Raleway:wght@400;700&family=Great+Vibes&family=Parisienne&display=swap');
 
 :root {
-    --bg-color: #EEEEEE;
-    --primary-color: #EEEEEE;
-    --secondary-color: #333333;
-    --text-color: #333333;
-    --text-color-2: #333333;
-    --text-color-3: #B4A1BB;
-    --overlay-color: #EEEEEE;
-}
-
-[data-theme="dark"] {
-    --bg-color: #333333;
-    --primary-color: #333333;
-    --secondary-color: #EEEEEE;
-    --text-color: #EEEEEE;
-    --text-color-2: #EEEEEE;
-    --text-color-3: #B4A1BB;
-    --overlay-color: #333333;
-}
+    --bg-color: #f4f6f8;
+    --primary-color: #f4f6f8;
+    --secondary-color: #322E2B;
+    --text-color: #322E2B;
+    --text-color-2: #322E2B;
+    --overlay-color: #f4f6f8;
+  
+    --color-1: #e43d34;
+    --color-2: #ea6b62;
+    --color-3: #ef8f79;
+    --color-4: #ee7c23;
+    --color-5: #f39c4f;
+    --color-6: #f5b77c;
+    --color-7: #fedd58;
+    --color-8: #fbc352;
+    --color-9: #d9db56;
+    --color-10: #1aafab;
+    --color-11: #90cecd;
+    --color-12: #6eb0e0;
+    --color-13: #b695a8;
+    --color-14: #d0b8c6;
+    --color-15: #87c498;
+    --color-16: #b8d7ad;
+    --color-17: #d3b09d;
+    --color-18: #e7d1c3;
+    --color-19: #cd80a2;
+    --color-20: #9d948f;
+    --color-21: #dfdad6;
+    --color-22: #9fb9ae;
+    --color-23: #ddd1a9;
+    --color-24: #96c0d6;
+    --color-25: #5A5AC9;
+  }
+  
+  [data-theme="dark"] {
+    --bg-color: #322E2B;
+    --primary-color: #322E2B;
+    --secondary-color: #f4f6f8;
+    --text-color: #f4f6f8;
+    --text-color-2: #f4f6f8;
+    --overlay-color: #322E2B;
+  
+    --color-1: #b72d27;
+    --color-2: #c4554e;
+    --color-3: #d06d5f;
+    --color-4: #bb5e18;
+    --color-5: #c77931;
+    --color-6: #d49756;
+    --color-7: #bfa42c;
+    --color-8: #c69e39;
+    --color-9: #a5a730;
+    --color-10: #13807d;
+    --color-11: #5e9a98;
+    --color-12: #4a8ab7;
+    --color-13: #8d7386;
+    --color-14: #a58d99;
+    --color-15: #5f9a6e;
+    --color-16: #8cae85;
+    --color-17: #a07865;
+    --color-18: #b59886;
+    --color-19: #a05f81;
+    --color-20: #6d6662;
+    --color-21: #a79e99;
+    --color-22: #748f84;
+    --color-23: #b5a06d;
+    --color-24: #6795af;
+    --color-25: #5A5AC9;
+  }
 
 html, body {
     height: 100%;
@@ -71,4 +121,14 @@ code {
 
 .color_sec {
     color: var(--secondary-color);
+}
+
+
+/* Cursive Title Styles */
+.title-great {
+    font-family: 'Great Vibes', cursive;
+}
+
+.title-parisienne {
+    font-family: 'Parisienne', cursive;
 }
