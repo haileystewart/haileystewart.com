@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
-import { about, meta } from "../../content_option";
+import { meta } from "../../content_option";
 
 export const About = () => {
   return (
@@ -18,8 +18,8 @@ export const About = () => {
         {/* Hero Section - Combines Scrolling Title & Text Box */}
         <div className="hero-section">
           {/* Scrolling Title Animation */}
-          <div className="scrolling-title">
-            <div className="scrolling-text">
+          <div className="about-scrolling-title">
+            <div className="about-scrolling-text">
               <span>ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART </span>
               <span>ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART ABOUT HAILEY STEWART </span>
             </div>

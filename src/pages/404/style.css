@@ -1,0 +1,117 @@
+/* Full-page layout */
+.under-construction {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg-color);
+    overflow: hidden;
+    position: relative;
+}
+
+/* 🌟 Top Rectangle Covering Tape */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: var(--bg-color);
+    z-index: 1100; /* Ensures it stays above everything */
+  }
+
+/* Scrolling Warning Tape */
+.scrolling-title {
+    width: 200%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+}
+
+/* Scrolling Text */
+.scrolling-text {
+    display: flex;
+    align-items: center;
+    font-size: 48px;
+    font-family: "Marcellus", serif;
+    text-transform: uppercase;
+    color: #322E2B;
+    background-color: var(--color-8);
+    height: 70px;
+    padding: 0 0 0 0;
+    width: 400%; /* Ensure full coverage before animation resets */
+    animation: scrollText 30s linear infinite; /* Reduce animation duration if needed */
+}
+
+/* Ensure each span repeats to prevent gaps */
+.scrolling-text span {
+    display: inline-block;
+    min-width: 100%;
+    background-color: var(--color-8); /* Ensures background extends with text */
+    padding: 0 20px; /* Adds padding to prevent cut-off */
+}
+
+/* Adjust the animation to match the width */
+@keyframes scrollText {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%); /* Ensure it loops seamlessly */
+    }
+}
+
+/* Unique positioning & rotation for each warning tape */
+.warning-tape-1 {
+    top: 15%;
+    transform: rotate(15deg) translateX(-10%);
+}
+
+.warning-tape-2 {
+    top: 35%;
+    transform: rotate(-15deg) translateX(-10%);
+}
+
+.warning-tape-4 {
+    top: 85%;
+    transform: rotate(8deg) translateX(-10%);
+}
+
+.warning-tape-5 {
+    top: 70%;
+    transform: rotate(-5deg) translateX(-10%);
+}
+
+/* Main Content */
+.construction-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left; /* Center content dynamically */
+    position: absolute;
+    top: 40%; /* Move content to the center of the page */
+    left: 25%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Ensure exact centering */
+    gap: 40px; /* Space between h1 and p */
+    width: 50vw; /* Make it take up 50% of the page width */
+    max-width: 800px; /* Prevent it from becoming too wide */
+    margin-left: 75px;
+}
+
+.construction-content h1 {
+    font-size: 86px;
+    font-family: "Marcellus", serif;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Forces each span to be on a new line */
+    line-height: 1.2;
+}
+
+.construction-content h1 span {
+    display: block; /* Ensures each word is on a new line */
+}

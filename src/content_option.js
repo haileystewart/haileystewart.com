@@ -196,7 +196,7 @@ export const dataportfolio = [
   },
   {
     title: "project",
-    link: "homepage",
+    link: "404",
     color: "#F39C4F"
   },
   {
@@ -241,7 +241,7 @@ export const dataportfolio = [
   },
   {
     title: "project",
-    link: "homepage",
+    link: "404",
     color: "#D0B8C6"
   },
   {

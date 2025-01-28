@@ -13,6 +13,7 @@ import { Socialicons } from '../components/socialicons';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import { Photography } from '../pages/photography/photography';
+import UnderConstruction from '../pages/404';
 
 // Define page-specific colors
 const pageColors = {
@@ -39,7 +40,7 @@ const SetPageColors = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const hoverColor = pageColors[location.pathname] || "--color-24"; // Default to color-24
+    const hoverColor = pageColors[location.pathname] || "--color-25"; // Default to color-24
     document.documentElement.style.setProperty("--breadcrumb-hover-color", `var(${hoverColor})`);
     document.documentElement.style.setProperty("--menu-hover-color", `var(${hoverColor})`);
   }, [location]);
@@ -70,7 +71,8 @@ const AnimatedRoutes = withRouterCustom(() => {
           <Route path="/portfolio/botnet_detection" element={<BotnetDetection />} />
           <Route path="/portfolio/aws_hangman_server" element={<AWSHangmanServer />} />
           <Route path="/contact" element={<ContactUs />} />
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<UnderConstruction />} />
+          <Route path="/404" element={<UnderConstruction />} />
         </Routes>
       </CSSTransition>
     </TransitionGroup>

@@ -42,10 +42,8 @@ export const Home = () => {
         <div className="nav_grid">
           <Link to="/portfolio" className="nav_item">PORTFOLIO</Link>
           <Link to="/about" className="nav_item">ABOUT</Link>
-          {/* 
           <Link to="/photography" className="nav_item">PHOTOGRAPHY</Link>
           <Link to="/feed" className="nav_item">FEED</Link>
-          */}
           <Link to="/contact" className="nav_item">CONTACT</Link>
         </div>
 

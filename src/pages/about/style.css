@@ -29,7 +29,7 @@
 }
 
 /* Scrolling Title */
-.scrolling-title {
+.about-scrolling-title {
   width: 100vw;
   overflow: hidden;
   white-space: nowrap;
@@ -38,7 +38,7 @@
 }
 
 /* Scrolling Text */
-.scrolling-text {
+.about-scrolling-text {
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -52,7 +52,7 @@
 }
 
 /* Each span repeats the text multiple times */
-.scrolling-text span {
+.about-scrolling-text span {
   display: inline-block;
   min-width: 100%;
 }

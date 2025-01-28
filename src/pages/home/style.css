@@ -108,7 +108,7 @@ html, body {
 .nav_item:nth-child(1) { text-align: left; padding-left: 35%; }  /* Portfolio */
 .nav_item:nth-child(2) { text-align: center; padding-left: 70%; } /* About */
 .nav_item:nth-child(3) { text-align: right; padding-left: 5%; } /* Photography */
-.nav_item:nth-child(4) { text-align: left; padding-left: 25%; } /* Feed */
+.nav_item:nth-child(4) { text-align: left; padding-left: 30%; } /* Feed */
 .nav_item:nth-child(5) { text-align: right; padding-left: 55%; } /* Contact */
 
 /* Hover Effect */
