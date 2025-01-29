@@ -19,7 +19,7 @@ export const Home = () => {
           <div className="home_text">
             <p>
               a <span>cybersecurity analyst</span> with a passion for{" "}
-              <span>threat analyst</span>, <span>incident response</span>, and{" "}
+              <span>threat analysis</span>, <span>incident response</span>, and{" "}
               <span>cloud security</span>.
             </p>
           </div>
